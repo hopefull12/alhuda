@@ -118,11 +118,10 @@
 		<section id="page-title">
 
 			<div class="container clearfix">
-				<h1>My Account</h1>
+				<h1>Masjid AlHuda Donation </h1>
 				<ol class="breadcrumb">
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Pages</a></li>
-					<li class="active">Login</li>
+					<li><a href="main.html">Home</a></li>					
+					<li class="active">Donate</li>
 				</ol>
 			</div>
 
@@ -141,66 +140,90 @@
 					<div class="col_half">
 						
 								<h3>Please donate generously!</h3>									
-	                            <div class="col_full">
+	                            <div class="col_three_fourth">
 	                                <label for="donationCategory">What category would you like to donate:</label>	                                                             
 									<select id="donationCategory" name="donationCategory" class="form-control">
-									  <option value="Sadaqa">Sadaqa</option>
-									  <option value="Zakat">Zakat</option>
-									  <option value="Zakat">Donation</option>
+									  <option value="sadaka">Sadaka</option>
+									  <option value="zakat">Zakat</option>
+									  <option value="generalDonation">Donation</option>
 									  <option value="divider">---------------</option>
-									  <option value="MasjidExpansion">Masjid Expansion</option>
-									  <option value="MasjidMaintenance">Masjid Maintenance</option>
-									  <option value="MasjidMaintenance">Brick Donation</option>
+									  <option value="masjidExpansion">Masjid Expansion</option>
+									  <option value="masjidMaintenance">Masjid Maintenance</option>
+									  <option value="brickDonation">Brick Donation</option>
 									</select>	    
 								</div>	                                        
 	                            
-	                            <div class="col_full" id="zakatDiv" >
+	                            <div class="col_full" id="zakatPPDiv" style="display: none" >	                            	
 									<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 									<input type="hidden" name="cmd" value="_s-xclick">
-									<input type="hidden" name="hosted_button_id" value="GFWGVT46PYQVC">
-									<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+									<input type="hidden" name="hosted_button_id" value="L6XP67UQUPGXY">
+									<input type="image" width="230" height="65" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
 									<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-									</form>								                            
+									</form>							                           
 	                            </div>	  
-	                            <div class="col_full" id="masjidDiv" style="display: none">
+	                            <div class="col_full" id="sadakaPPDiv" >	                            	
 									<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 									<input type="hidden" name="cmd" value="_s-xclick">
-									<input type="hidden" name="hosted_button_id" value="RCEF9TX33P4G4">
-									<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+									<input type="hidden" name="hosted_button_id" value="XXG2QVPH3YUNJ">
+									<input type="image" width="230" height="65" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
 									<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 									</form>
-							                            
+						                           
+	                            </div>		  
+	                            <div class="col_full" id="generalDonationPPDiv" style="display: none">	                            	
+									<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+									<input type="hidden" name="cmd" value="_s-xclick">
+									<input type="hidden" name="hosted_button_id" value="8E9PWCCFVGPPW">
+									<input type="image" width="230" height="65" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+									<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+									</form>						                           
+	                            </div>		                                                      
+	                            <div class="col_full" id="masjidExpansionPPDiv" style="display: none">	                            	
+									<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+									<input type="hidden" name="cmd" value="_s-xclick">
+									<input type="hidden" name="hosted_button_id" value="J7Z96RA75YXS8">
+									<input type="image" width="230" height="65" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+									<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+									</form>							                            
 	                            </div>	                            
-	                            	                                                                       				
-												
+	                            <div class="col_full" id="brickDonationPPDiv" style="display: none">	                            	
+									<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+									<input type="hidden" name="cmd" value="_s-xclick">
+									<input type="hidden" name="hosted_button_id" value="ERUPQBCQZXCDW">
+									<input type="image" width="230" height="65" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+									<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+									</form>					                           
+	                            </div>		                                                      
+	                            <div class="col_full" id="masjidMaintenancePPDiv" style="display: none">	                            	
+									<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+									<input type="hidden" name="cmd" value="_s-xclick">
+									<input type="hidden" name="hosted_button_id" value="XMMY8UB65DML4">
+									<input type="image" width="230" height="65" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+									<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+									</form>						                            
+	                            </div>		                            	                                                                       																
 						
 						<script type="text/javascript">
 						$(document).ready(function(){
 							$("#donationCategory").change(function(){
 								//alert("in yes");
 						        var category = $("#donationCategory").val();
-						        if(category == "Sadaqa" || category == "Zakat"){
-						        	$("#zakatDiv").show();
-						        	$("#masjidDiv").hide();
-						        }
-						        if(category == "MasjidExpansion" || category == "MasjidMaintenance"){
-						        	$("#zakatDiv").hide();
-						        	$("#masjidDiv").show();
-						        }						        
+						        
+						        var divId = category + "PPDiv";
+						        
+						        $( "div[id$='PPDiv']" ).each(function(){
+						        								        		
+						        		if($(this).attr('id') == divId){
+						        			$(this).show();
+						        		} else {
+						        			$(this).hide();
+						        		}
+						        
+						        });					        
 						        
 						    });						    
 						});
-						
-						$(document).ready(function(){
-							$("#recurringPaymentYes").click(function(){
-								//alert("in yes");
-						        $("#zakatDiv").show();
-						    });
-						    $("#recurringPaymentNo").click(function(){
-						    	//alert("in no");
-						    	$("#recurringPaymentOptions").hide();
-						    });
-						});						
+				
 						</script>						
 										
 					</div>
