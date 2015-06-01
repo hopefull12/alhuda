@@ -20,6 +20,15 @@
 	background-color: #FFF;
 }
 
+.table > thead > tr > th.nextprayer, .table > tbody > tr > td.nextprayer {
+  color: #46C73D;
+  background-color: #46C73D;
+}
+
+#prayer-times table th, #prayer-times table td {
+	text-align: center;
+}
+
 #prayer-times h3, h4{
 	margin-bottom: 5px;
 	white-space: nowrap;

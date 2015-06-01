@@ -59,8 +59,8 @@
                     <!-- Logo
                     ============================================= -->
                     <div id="logo">
-                        <a href="main.html" class="standard-logo" data-dark-logo="images/logo-dark.png"><img src="images/alhuda/logo.png" alt="AlHuda Logo"></a>
-                        <a href="index.html" class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img src="images/logo@2x.png" alt="AlHuda Logo"></a>
+                        <a href="main.html" class="standard-logo" data-dark-logo="images/logo-dark.png"><img src="images/alhuda/logo1.png" alt="AlHuda Logo"></a>
+                        <a href="main.html" class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img src="images/alhuda/logo1.png" alt="AlHuda Logo"></a>
                     </div><!-- #logo end -->
 
                     <!-- Primary Navigation
@@ -140,13 +140,13 @@
         		</div>
         		<div class="col_three_fifth ">
         		
-                        <table class="table hidden-xs hidden-sm">
+                        <table class="table hidden-xs hidden-sm" id="prayertimegrid1">
                           <thead>
                             <tr>
                               <th></th>
                               <th><h3>Fajar</h3></th>
                               <th><h3>Sunrise</h3></th>
-                              <th><h3>Dhuhr</h3></th>
+                              <th class="nextprayer"><h3>Dhuhr</h3></th>
                               <th><h3>Asr</h3></th>
                               <th><h3>Maghrib</h3></th>
                               <th><h3>Isha</h3></th>
@@ -159,7 +159,7 @@
                               <td><h4><span class="subtitle subtitle-font"><strong>Begins</strong></span></h4></td>
                               <td><h4><span class="subtitle">${dailySchedule.fajarBeginTime}</span></h4></td>
                               <td><h4><span class="subtitle">${dailySchedule.fajarIqamaTime}</h4></td>
-                              <td><h4><span class="subtitle">12:150 PM</h4></td>
+                              <td class="nextprayer"><h4><span class="subtitle">12:150 PM</h4></td>
                               <td><h4><span class="subtitle">5:44 PM</h4></td>
                               <td><h4><span class="subtitle">7:48 PM</h4></td>
                               <td><h4><span class="subtitle">9:14 PM</h4></td>
@@ -170,7 +170,7 @@
                               <td><h4><span class="subtitle subtitle-font"><strong>Iqama</strong></span></h4></td>
                               <td><h4><span class="subtitle">5:15 AM</span></h4></td>
                               <td><h4><span class="subtitle">5:15 AM</span></h4></td>
-                              <td><h4><span class="subtitle">1:30 PM</span></h4></td>
+                              <td class="nextprayer"><h4><span class="subtitle">1:30 PM</span></h4></td>
                               <td><h4><span class="subtitle">6:00 PM</span></h4></td>
                               <td><h4><span class="subtitle">7:48 PM</span></h4></td>
                               <td><h4><span class="subtitle">9:40 PM</span></h4></td>
@@ -181,7 +181,7 @@
                         </table>                                       
         		
        		
-                        <table class="table hidden-md hidden-lg">
+                        <table class="table hidden-md hidden-lg" id="prayertimegrid2">
                             <tr>
                               <th></th>
                               <td><h4><span class="subtitle"><strong>Begins</strong></span></h4></td>

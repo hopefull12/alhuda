@@ -33,5 +33,4 @@ public class MasjidService {
 		return bean;		
 		
 	}
-
 }
