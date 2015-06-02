@@ -90,7 +90,7 @@
                             </li>                            
                             <li><a href="#"><div>Prayer Times</div></a>
                             </li>      
-                            <li><a href="#"><div>Donations</div></a>
+                            <li><a href="donate.html"><div>Donations</div></a>
                             </li> 
                             <li><a href="events.html"><div>Events</div></a>
                             </li>       
@@ -252,7 +252,9 @@
 							</a>																
 															
 						<div class="divcenter">
-							<img alt="" src="images/alhuda/Paypal1.png">
+							<a href="donate.html">
+								<img alt="" src="images/alhuda/Paypal1.png">
+							</a>
 						</div>					
 					</div>
 

@@ -37,7 +37,7 @@ public class PaymentUsingPaypalAccountController {
 	
 	@RequestMapping(value="/donate", method=RequestMethod.GET)
 	public ModelAndView displayDonationButtonView() {
-		ModelAndView mav = new ModelAndView("donationbuttons", "doantionBean", new DonationBean());
+		ModelAndView mav = new ModelAndView("donationTile", "doantionBean", new DonationBean());
 		return mav;
 	}		
 	

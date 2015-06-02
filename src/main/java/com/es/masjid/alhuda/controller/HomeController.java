@@ -25,5 +25,16 @@ public class HomeController {
 		
 		return mv;
 	}	
+	
+	@RequestMapping(value={"/", "home"}, method=RequestMethod.GET)
+	public ModelAndView home() {
+		
+		ModelAndView mv = new ModelAndView("homeTile");
+		
+		DailyScheduleBean bean = masjidService.getTodaySchedule();
+		mv.addObject("dailySchedule", bean);
+		
+		return mv;
+	}	
 
 }

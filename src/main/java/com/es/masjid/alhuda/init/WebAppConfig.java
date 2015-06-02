@@ -8,11 +8,14 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.ResourceBundleMessageSource;
 import org.springframework.core.env.Environment;
+import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.JstlView;
 import org.springframework.web.servlet.view.UrlBasedViewResolver;
+import org.springframework.web.servlet.view.tiles3.TilesConfigurer;
+import org.springframework.web.servlet.view.tiles3.TilesViewResolver;
 
 @Configuration
 @EnableWebMvc
@@ -34,14 +37,14 @@ public class WebAppConfig extends WebMvcConfigurerAdapter {
         registry.addResourceHandler("/client/**").addResourceLocations("/client/"); 
     }	
 
-	@Bean
-	public UrlBasedViewResolver setupViewResolver() {
-		UrlBasedViewResolver resolver = new UrlBasedViewResolver();
-		resolver.setPrefix("/WEB-INF/");
-		resolver.setSuffix(".jsp");
-		resolver.setViewClass(JstlView.class);
-		return resolver;
-	}
+//	@Bean
+//	public UrlBasedViewResolver setupViewResolver() {
+//		UrlBasedViewResolver resolver = new UrlBasedViewResolver();
+//		resolver.setPrefix("/WEB-INF/");
+//		resolver.setSuffix(".jsp");
+//		resolver.setViewClass(JstlView.class);
+//		return resolver;
+//	}
 	
 	@Bean
 	public ResourceBundleMessageSource messageSource() {
@@ -50,5 +53,20 @@ public class WebAppConfig extends WebMvcConfigurerAdapter {
 		source.setUseCodeAsDefaultMessage(true);
 		return source;
 	}
+	
+	@Bean
+	public TilesConfigurer tilesConfigurer() {
+		TilesConfigurer tiles = new TilesConfigurer();
+		tiles.setDefinitions(new String[] {
+		"/WEB-INF/layout/tiles.xml"
+		});
+		tiles.setCheckRefresh(true);
+		return tiles;
+	}	
+	
+	@Bean
+	public ViewResolver viewResolver() {
+	return new TilesViewResolver();
+	}	
 
 }

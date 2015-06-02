@@ -65,7 +65,7 @@
                     <nav id="primary-menu">
 
                         <ul>
-                            <li class="current"><a href="main.html"><div>Home</div></a>
+                            <li><a href="main.html"><div>Home</div></a>
                             </li>
                             <li><a href="#"><div>About Us</div></a>
                                 <ul>
@@ -87,7 +87,7 @@
                             </li>                            
                             <li><a href="#"><div>Prayer Times</div></a>
                             </li>      
-                            <li><a href="#"><div>Donations</div></a>
+                            <li class="current"><a href="donate.html"><div>Donations</div></a>
                             </li> 
                             <li><a href="events.html"><div>Events</div></a>
                             </li>       

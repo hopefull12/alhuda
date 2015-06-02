@@ -18,4 +18,9 @@ public class StaticPageController {
 		return new ModelAndView("board");
 	}		
 	
+	@RequestMapping(value={"/underconstruction"}, method=RequestMethod.GET)
+	public ModelAndView underConstruction() {
+		return new ModelAndView("underConstructionTile");
+	}		
+	
 }
