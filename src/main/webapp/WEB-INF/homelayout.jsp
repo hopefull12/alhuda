@@ -36,6 +36,7 @@
     ============================================= -->
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/plugins.js"></script>
+	<script type="text/javascript" src="js/moment.min.js"></script>
 
     <!-- Document Title
     ============================================= -->

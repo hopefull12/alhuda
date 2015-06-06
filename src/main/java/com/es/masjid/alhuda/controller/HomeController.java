@@ -15,7 +15,7 @@ public class HomeController {
 	@Autowired
 	private MasjidService masjidService;
 	
-	@RequestMapping(value={"/", "main"}, method=RequestMethod.GET)
+	@RequestMapping(value={"main"}, method=RequestMethod.GET)
 	public ModelAndView index() {
 		
 		ModelAndView mv = new ModelAndView("main");

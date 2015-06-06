@@ -18,15 +18,15 @@
 
 				<div class="container clearfix">
 
-					<div class="col_one_fourth">
+					<div class="col_one_fifth">
 					</div>
-					<div class="col_half">
+					<div class="col_three_fifth">
 						
 								<h3>Please donate generously!</h3>									
 	                            <div class="col_full">
 	                                <label for="donationCategory">What category would you like to donate:</label>	                                                             
 									<select id="donationCategory" name="donationCategory" class="form-control">
-									  <option value="sadaka">Sadaka</option>
+									  <option value="sadaqa">Sadaqa</option>
 									  <option value="zakat">Zakat</option>
 									  <option value="generalDonation">Donation</option>
 									  <option value="divider">-------------------------------</option>
@@ -110,7 +110,7 @@
 						</script>						
 										
 					</div>
-					<div class="col_one_fourth">
+					<div class="col_one_fifth">
 					</div>
 
 				</div>

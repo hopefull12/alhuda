@@ -4,6 +4,6 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
 	version="3.0">
 
-	<display-name>spr-data</display-name>
+	<display-name>Masjid AlHuda</display-name>
 
 </web-app>

@@ -17,6 +17,10 @@ public class DailyScheduleBean {
 	private String ishaTIme;
 	private String ishaIqamaTIme;
 	private String date;
+	private String jumah1Time;
+	private String jumah1IqamaTime;
+	private String jumah2Time;
+	private String jumah2IqamaTime;
 	
 	
 	public String getFajarBeginTime() {
@@ -90,6 +94,30 @@ public class DailyScheduleBean {
 	}
 	public void setDate(String date) {
 		this.date = date;
+	}
+	public String getJumah1Time() {
+		return jumah1Time;
+	}
+	public void setJumah1Time(String jumah1Time) {
+		this.jumah1Time = jumah1Time;
+	}
+	public String getJumah1IqamaTime() {
+		return jumah1IqamaTime;
+	}
+	public void setJumah1IqamaTime(String jumah1IqamaTime) {
+		this.jumah1IqamaTime = jumah1IqamaTime;
+	}
+	public String getJumah2Time() {
+		return jumah2Time;
+	}
+	public void setJumah2Time(String jumah2Time) {
+		this.jumah2Time = jumah2Time;
+	}
+	public String getJumah2IqamaTime() {
+		return jumah2IqamaTime;
+	}
+	public void setJumah2IqamaTime(String jumah2IqamaTime) {
+		this.jumah2IqamaTime = jumah2IqamaTime;
 	}
 
 

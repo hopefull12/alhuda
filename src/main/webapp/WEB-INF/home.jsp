@@ -35,24 +35,24 @@
                             <tr>
                               <td><h4><span class="subtitle subtitle-font"><strong>Begins</strong></span></h4></td>
                               <td><h4><span class="subtitle">${dailySchedule.fajarBeginTime}</span></h4></td>
-                              <td><h4><span class="subtitle">${dailySchedule.fajarIqamaTime}</h4></td>
-                              <td><h4><span class="subtitle">12:150 PM</h4></td>
-                              <td><h4><span class="subtitle">5:44 PM</h4></td>
-                              <td><h4><span class="subtitle">7:48 PM</h4></td>
-                              <td><h4><span class="subtitle">9:14 PM</h4></td>
-                              <td><h4><span class="subtitle">12:00 PM</h4></td>
-                              <td><h4><span class="subtitle">1:00 PM</h4></td>
+                              <td><h4><span class="subtitle">${dailySchedule.sunriseTime}</h4></td>
+                              <td><h4><span class="subtitle">${dailySchedule.dhuhrTIme}</h4></td>
+                              <td><h4><span class="subtitle">${dailySchedule.asrTime}</h4></td>
+                              <td><h4><span class="subtitle">${dailySchedule.maghribTIme}</h4></td>
+                              <td><h4><span class="subtitle">${dailySchedule.ishaTIme}</h4></td>
+                              <td><h4><span class="subtitle">${dailySchedule.jumah1Time}</h4></td>
+                              <td><h4><span class="subtitle">${dailySchedule.jumah2Time}</h4></td>
                             </tr>
                             <tr class="active">
                               <td><h4><span class="subtitle subtitle-font"><strong>Iqama</strong></span></h4></td>
-                              <td><h4><span class="subtitle">5:15 AM</span></h4></td>
-                              <td><h4><span class="subtitle">5:15 AM</span></h4></td>
-                              <td><h4><span class="subtitle">1:30 PM</span></h4></td>
-                              <td><h4><span class="subtitle">6:00 PM</span></h4></td>
-                              <td><h4><span class="subtitle">7:48 PM</span></h4></td>
-                              <td><h4><span class="subtitle">9:40 PM</span></h4></td>
-                              <td><h4><span class="subtitle">12:30 PM</span></h4></td>
-                              <td><h4><span class="subtitle">1:30 PM</span></h4></td>
+                              <td><h4><span class="subtitle">${dailySchedule.fajarIqamaTime}</span></h4></td>
+                              <td><h4><span class="subtitle">${dailySchedule.sunriseTime}</span></h4></td>
+                              <td><h4><span class="subtitle">${dailySchedule.dhuhrIqamaTIme}</span></h4></td>
+                              <td><h4><span class="subtitle">${dailySchedule.asrIqamaTIme}</span></h4></td>
+                              <td><h4><span class="subtitle">${dailySchedule.maghribIqamaTIme}</span></h4></td>
+                              <td><h4><span class="subtitle">${dailySchedule.ishaIqamaTIme}</span></h4></td>
+                              <td><h4><span class="subtitle">${dailySchedule.jumah1IqamaTime}</span></h4></td>
+                              <td><h4><span class="subtitle">${dailySchedule.jumah2IqamaTime}</span></h4></td>
                             </tr>
                           </tbody>
                         </table>                                       
@@ -67,45 +67,116 @@
                             <tr>                             
                               <th><h3>Fajar</h3></th>           
                               <td><h4><span class="subtitle">${dailySchedule.fajarBeginTime}</span></h4></td>       
-                              <td class="success"><h4><span class="subtitle">5:16 AM</span></h4></td>  
+                              <td class="success"><h4><span class="subtitle">${dailySchedule.fajarIqamaTime}</span></h4></td>  
                               
                             </tr>
                             <tr>                              
                               <th><h3>Sunrise</h3></th>        
-                              <td><h4><span class="subtitle">5:53 AM</h4></td>     
-                              <td class="success"><h4><span class="subtitle">5:15 AM</span></h4></td>             
+                              <td><h4><span class="subtitle">${dailySchedule.sunriseTime}</h4></td>     
+                              <td class="success"><h4><span class="subtitle">${dailySchedule.sunriseTime}</span></h4></td>             
                             </tr>
                             <tr>
                               <th><h3>Dhuhr</h3></th>
-                              <td><h4><span class="subtitle">12:150 PM</h4></td>
-                              <td class="success"><h4><span class="subtitle">1:30 PM</span></h4></td>
+                              <td><h4><span class="subtitle">${dailySchedule.dhuhrTIme}</h4></td>
+                              <td class="success"><h4><span class="subtitle">${dailySchedule.dhuhrIqamaTIme}</span></h4></td>
                             </tr>          
                             <tr>
                               <th><h3>Asr</h3></th>
-                              <td><h4><span class="subtitle">5:44 PM</h4></td>
-                              <td class="success"><h4><span class="subtitle">6:00 PM</span></h4></td>
+                              <td><h4><span class="subtitle">${dailySchedule.asrTime}</h4></td>
+                              <td class="success"><h4><span class="subtitle">${dailySchedule.asrIqamaTIme}</span></h4></td>
                             </tr>      
                             <tr>
                               <th><h3>Maghrib</h3></th>
-                              <td><h4><span class="subtitle">7:48 PM</h4></td>
-                              <td class="success"><h4><span class="subtitle">7:48 PM</span></h4></td>
+                              <td><h4><span class="subtitle">${dailySchedule.maghribTIme}</h4></td>
+                              <td class="success"><h4><span class="subtitle">${dailySchedule.maghribIqamaTIme}</span></h4></td>
                             </tr>
                             <tr>
                               <th><h3>Isha</h3></th>
-                              <td><h4><span class="subtitle">9:14 PM</h4></td>
-                              <td class="success"><h4><span class="subtitle">9:40 PM</span></h4></td>
+                              <td><h4><span class="subtitle">${dailySchedule.ishaTIme}</h4></td>
+                              <td class="success"><h4><span class="subtitle">${dailySchedule.ishaIqamaTIme}</span></h4></td>
                             </tr>                   
                             <tr>
                               <th><h3>Jumah 1</h3></th>
-                              <td><h4><span class="subtitle">12:00 PM</h4></td>
-                              <td class="success"><h4><span class="subtitle">12:30 PM</span></h4></td>
+                              <td><h4><span class="subtitle">${dailySchedule.jumah1Time}</h4></td>
+                              <td class="success"><h4><span class="subtitle">${dailySchedule.jumah1IqamaTime}</span></h4></td>
                             </tr>  
                             <tr>
                               <th><h3>Jumah 2</h3></th>
-                              <td><h4><span class="subtitle">1:00 PM</h4></td>
-                              <td class="success"><h4><span class="subtitle">1:30 PM</span></h4></td>
+                              <td><h4><span class="subtitle">${dailySchedule.jumah2Time}</h4></td>
+                              <td class="success"><h4><span class="subtitle">${dailySchedule.jumah2IqamaTime}</span></h4></td>
                             </tr>                              
                         </table>          		
+                        
+						<script type="text/javascript">
+						
+						function setPrayerTimes(){
+							
+							//Central time offset in hours
+							var offset = 5;
+						    // create Date object for current location						    
+						    var now = new Date();
+							//get offset relative to the UTC/GMT time
+						    var localOffset = now.getTimezoneOffset() * 60000;
+							//Convert current time to UTC time by adding the offset
+						    var utc = now.getTime() + localOffset;
+	
+						    // create new Date object for different city using supplied offset						    
+						    var currentCST = new Date(utc - (3600000*offset));
+						    
+						    var cstHour = currentCST.getHours();
+						    var cstMinute = currentCST.getMinutes();
+						    
+						    var prayerTimes = [];
+						    
+						    now.setHours(0,0,0,0);
+						    var year = now.getFullYear(), month = now.getMonth(), day = now.getDate();
+						    var strNow = (month+1) + "/" + day + "/" + year;
+						    var nextPrayerIndex = 0;
+						    var nextPrayerTime;
+						    $('#prayertimegrid1 tr:eq(2) td').each(function(index, element){						    							    	
+						    	var text = $(this).find('span').text();
+						    	if(!(index == 0 || index == 2 || (currentCST.getDay() == 5 && index == 3) || (currentCST.getDay() != 5 && (index == 7 || index == 8)) )){
+						    		var pd = new Date(strNow + " " + text);
+						    		prayerTimes[prayerTimes.length] = pd;
+						    	}
+						    });
+						    
+						    prayerTimes.sort();
+						    
+						    $(prayerTimes).each(function(index, element){										    		
+					    		if(this.getTime() > currentCST.getTime()){
+					    			nextPrayerIndex = index;
+					    			nextPrayerTime = this.getTime() - currentCST.getTime();
+					    			return false;
+					    		}						    	
+						    });
+						    
+						    var tableIndex = nextPrayerIndex + 1;
+						    if(currentCST.getDay() == 5){
+						    	
+						    	if(nextPrayerIndex == 1 || nextPrayerIndex == 2){
+						    		tableIndex = nextPrayerIndex + 6;
+						    	} 
+						    }
+						    
+						    $('#prayertimegrid1 tr:eq(0) th:eq('+tableIndex+")").addClass("nextprayer");
+						    $('#prayertimegrid1 tr:eq(1) td:eq('+tableIndex+")").addClass("nextprayer");
+						    $('#prayertimegrid1 tr:eq(2) td:eq('+tableIndex+")").addClass("nextprayer");	
+						    
+						    
+						    
+						    return nextPrayerTime;
+							
+						}
+						
+						$(document).ready(function(){														
+							
+							var nextPrayerInTime = setPrayerTimes();
+							setTimeout(function(){setPrayerTimes()},nextPrayerInTime);
+					    
+						});
+				
+						</script>                        
        		      		
 					</div>
 					
@@ -177,7 +248,7 @@
                     <div class="swiper-slide dark" style="background-image: url('images/alhuda/al-new-model6.png');">
                         <div class="container clearfix">
                             <div class="slider-caption slider-caption-center">
-                                <h2 data-caption-animate="fadeInUp">Support The Nonble Cause</h2>
+                                <h2 data-caption-animate="fadeInUp">Support The Noble Cause</h2>
                                 <p data-caption-animate="fadeInUp" data-caption-delay="200">Masjid Alhuda Expansion Project</p> 
                             </div>
                         </div>
@@ -347,56 +418,7 @@
 
                     </script><!-- Portfolio Script End -->                                                                                     
                     
-                    <div class="clear"></div>      
-                
-                <div class="fancy-title title-center title-dotted-border topmargin">
-                    <h3>Latest Audio</h3>
-                </div>                  
-                
-                <div id="portfolio" class="clearfix">
-
-                        <article class="portfolio-item pf-media pf-icons">
-                            <div class="portfolio-audio">
-								<audio preload="auto" id="id12" controls="controls" src="client/audio/NamesofAllah.mp3"></audio>								
-                            </div>
-                            <div class="portfolio-desc">
-                                <h3><a href="portfolio-single.html">Names of Allah</a></h3>
-                                <span></span>
-                            </div>
-                        </article>
-
-                        <article class="portfolio-item pf-illustrations">
-                            <div class="portfolio-audio">
-								<audio preload="auto" id="id12" controls="controls" src="client/audio/MuslimPrayer-NoExcuseToMissIt.mp3"></audio>								
-                            </div>
-                            <div class="portfolio-desc">
-                                <h3><a href="portfolio-single.html">No Excuse to Miss Prayer</a></h3>
-                                <span></span>
-                            </div>
-                        </article>
-
-                        <article class="portfolio-item pf-graphics pf-uielements">
-                            <div class="portfolio-audio">
-								<audio preload="auto" id="id12" controls="controls" src="client/audio/OutlandishSamiYusuf.mp3"></audio>								
-                            </div>
-                            <div class="portfolio-desc">
-                                <h3><a href="portfolio-single-video.html">Outlandish </a></h3>
-                                <span>Sami Yusuf</a></span>
-                            </div>
-                        </article>
-
-                        <article class="portfolio-item pf-icons pf-illustrations">
-                            <div class="portfolio-audio">
-								<audio preload="auto" id="id12" controls="controls" src="client/audio/proud-to-be-a-muslim.mp3"></audio>								
-                            </div>
-                            <div class="portfolio-desc">
-                                <h3><a href="portfolio-single-video.html">Proud to be Muslim</a></h3>
-                                <span></span>
-                            </div>
-                        </article>                
-                
-                </div>     
-                
+                    <div class="clear"></div>                      
                 
 
                 </div>                          

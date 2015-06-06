@@ -16,6 +16,10 @@
 		<put-attribute name="body" value="/WEB-INF/donationbuttons.jsp" />
 	</definition>	
 	
+	<definition name="masjidBoardTile" extends="baseTile">
+		<put-attribute name="body" value="/WEB-INF/board.jsp" />
+	</definition>		
+	
 	<definition name="underConstructionTile" extends="baseTile">
 		<put-attribute name="body" value="/WEB-INF/underConstruction.jsp" />
 	</definition>	

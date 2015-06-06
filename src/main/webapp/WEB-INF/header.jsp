@@ -12,8 +12,8 @@
                     <!-- Logo
                     ============================================= -->
                     <div id="logo">
-                        <a href="home.html" class="standard-logo" data-dark-logo="images/logo-dark.png"><img src="images/alhuda/logo1.png" alt="AlHuda Logo"></a>
-                        <a href="home.html" class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img src="images/alhuda/logo1.png" alt="AlHuda Logo"></a>
+                        <a href="home.html" class="standard-logo" data-dark-logo="images/logo-dark.png"><img src="images/alhuda/alhuda-logo1.png" alt="AlHuda Logo"></a>
+                        <a href="home.html" class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img src="images/alhuda/alhuda-logo1.png" alt="AlHuda Logo"></a>
                     </div><!-- #logo end -->
 
                     <!-- Primary Navigation
@@ -25,7 +25,7 @@
                             </li>
                             <li><a href="#"><div>About Us</div></a>
                                 <ul>
-                                    <li><a href="underconstruction.html"><div>Board of Turstees</div></a>
+                                    <li><a href="board.html"><div>Board of Trustees</div></a>
 
                                     </li>
                                     <li><a href="underconstruction.html"><div>Masjid Expansion</div></a>
@@ -49,12 +49,12 @@
                             </li>       
                             <li><a href="#"><div>Schools</div></a>
                                 <ul>
-                                    <li><a href="http://sites.alhudaacademy.com/alhudamain/"><div>Fulltime School</div></a>
+                                    <li><a href="http://sites.alhudaacademy.com/alhudamain/"><div>Full Time School</div></a>
 
                                     </li>
                                     <li><a href="underconstruction.html"><div>Sunday School</div></a>
                                     </li>
-                                    <li><a href="underconstruction.html"><div>Hifz &amp; Nazara School</div></a>
+                                    <li><a href="underconstruction.html"><div>Hifz &amp; Nazira School</div></a>
                                     </li>                                    
                                 </ul>
                             </li>
