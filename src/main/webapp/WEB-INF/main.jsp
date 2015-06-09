@@ -229,6 +229,77 @@
                               <td class="success"><h4><span class="subtitle">1:30 PM</span></h4></td>
                             </tr>                              
                         </table>          		
+                        
+						<script type="text/javascript">
+						
+						function setPrayerTimes(){
+							
+							//Central time offset in hours
+							var offset = 5;
+						    // create Date object for current location						    
+						    var now = new Date();
+							//get offset relative to the UTC/GMT time
+						    var localOffset = now.getTimezoneOffset() * 60000;
+							//Convert current time to UTC time by adding the offset
+						    var utc = now.getTime() + localOffset;
+	
+						    // create new Date object for different city using supplied offset						    
+						    var currentCST = new Date(utc - (3600000*offset));
+						    
+						    var cstHour = currentCST.getHours();
+						    var cstMinute = currentCST.getMinutes();
+						    
+						    var prayerTimes = [];
+						    
+						    now.setHours(0,0,0,0);
+						    var year = now.getFullYear(), month = now.getMonth(), day = now.getDate();
+						    var strNow = (month+1) + "/" + day + "/" + year;
+						    var nextPrayerIndex = 0;
+						    var nextPrayerTime;
+						    $('#prayertimegrid1 tr:eq(2) td').each(function(index, element){						    							    	
+						    	var text = $(this).find('span').text();
+						    	if(!(index == 0 || index == 2 || (currentCST.getDay() == 5 && index == 3) || (currentCST.getDay() != 5 && (index == 7 || index == 8)) )){
+						    		var pd = new Date(strNow + " " + text);
+						    		prayerTimes[prayerTimes.length] = pd;
+						    	}
+						    });
+						    
+						    prayerTimes.sort();
+						    
+						    $(prayerTimes).each(function(index, element){										    		
+					    		if(this.getTime() > currentCST.getTime()){
+					    			nextPrayerIndex = index;
+					    			nextPrayerTime = this.getTime() - currentCST.getTime();
+					    			return false;
+					    		}						    	
+						    });
+						    
+						    var tableIndex = nextPrayerIndex + 1;
+						    if(currentCST.getDay() == 5){
+						    	
+						    	if(nextPrayerIndex == 1 || nextPrayerIndex == 2){
+						    		tableIndex = nextPrayerIndex + 6;
+						    	} 
+						    }
+						    
+						    $('#prayertimegrid1 tr:eq(0) th:eq('+tableIndex+")").addClass("nextprayer");
+						    $('#prayertimegrid1 tr:eq(1) td:eq('+tableIndex+")").addClass("nextprayer");
+						    $('#prayertimegrid1 tr:eq(2) td:eq('+tableIndex+")").addClass("nextprayer");	
+						    
+						    
+						    
+						    return nextPrayerTime;
+							
+						}
+						
+						$(document).ready(function(){														
+							
+							var nextPrayerInTime = setPrayerTimes();
+							setTimeout(function(){setPrayerTimes()},nextPrayerInTime);
+					    
+						});
+				
+						</script>                             
        		      		
 					</div>
 					<div class="col_one_fifth col_last">

@@ -1,0 +1,1 @@
+We have <strong>successfully</strong> received your Message and will get Back to you as soon as possible.

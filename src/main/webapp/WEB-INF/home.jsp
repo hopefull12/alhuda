@@ -151,28 +151,27 @@
 					    		}						    	
 						    });
 						    
-						    var tableIndex = nextPrayerIndex + 1;
+						    //two columns were excluded earlier, so adding +2
+						    var tableIndex = nextPrayerIndex + 2;
 						    if(currentCST.getDay() == 5){
 						    	
 						    	if(nextPrayerIndex == 1 || nextPrayerIndex == 2){
 						    		tableIndex = nextPrayerIndex + 6;
 						    	} 
 						    }
-						    
+						    						    
 						    $('#prayertimegrid1 tr:eq(0) th:eq('+tableIndex+")").addClass("nextprayer");
 						    $('#prayertimegrid1 tr:eq(1) td:eq('+tableIndex+")").addClass("nextprayer");
 						    $('#prayertimegrid1 tr:eq(2) td:eq('+tableIndex+")").addClass("nextprayer");	
-						    
-						    
-						    
+						    						    						    
 						    return nextPrayerTime;
 							
 						}
 						
 						$(document).ready(function(){														
 							
-							var nextPrayerInTime = setPrayerTimes();
-							setTimeout(function(){setPrayerTimes()},nextPrayerInTime);
+							//var nextPrayerInTime = setPrayerTimes();
+							//setTimeout(function(){setPrayerTimes()},nextPrayerInTime);
 					    
 						});
 				

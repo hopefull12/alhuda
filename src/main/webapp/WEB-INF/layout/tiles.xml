@@ -20,8 +20,21 @@
 		<put-attribute name="body" value="/WEB-INF/board.jsp" />
 	</definition>		
 	
+	<definition name="prayerTimePdfFilesTile" extends="baseTile">
+		<put-attribute name="body" value="/WEB-INF/prayerTimePdfFiles.jsp" />
+	</definition>		
+	
+	<definition name="contactTile" extends="baseTile">
+		<put-attribute name="body" value="/WEB-INF/contact.jsp" />
+	</definition>	
+	
 	<definition name="underConstructionTile" extends="baseTile">
 		<put-attribute name="body" value="/WEB-INF/underConstruction.jsp" />
 	</definition>	
+	
+	<!-- Ajax Tiles -->
+	<definition name="contactUsAjaxTile" template="/WEB-INF/ajax/contactUsAjax.jsp">		
+	</definition>	
+	
 
 </tiles-definitions>

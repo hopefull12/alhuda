@@ -2,6 +2,7 @@ package com.es.masjid.alhuda.controller;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.InputStreamResource;
@@ -10,6 +11,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -39,10 +41,19 @@ public class StaticPageController {
 		return new ModelAndView("underConstructionTile");
 	}		
 	
-	@RequestMapping(value = "/files", method = RequestMethod.GET)
-	public ResponseEntity<InputStreamResource> downloadStuff(@RequestParam("fileName") String fileName)
+	@RequestMapping(value = "/ptPDFFiles", method = RequestMethod.GET)
+	public ModelAndView displayPDFFiles()
 	                                                                  throws IOException {
-		InputStream is = masjidService.getFileByFileName("");
+		ModelAndView mv = new ModelAndView("prayerTimePdfFilesTile");
+		List<String> fileNames = masjidService.getPDFFiles();
+		mv.addObject("ptPdfFiles", fileNames);
+		return mv;
+	}	
+	
+	@RequestMapping(value = "/ptPDFFiles/{fileName}", method = RequestMethod.GET)
+	public ResponseEntity<InputStreamResource> downloadPDFFile(@PathVariable("fileName") String fileName)
+	                                                                  throws IOException {
+		InputStream is = masjidService.getFileByFileName(fileName);
 		
 	    HttpHeaders respHeaders = new HttpHeaders();
 	    respHeaders.setContentType(MediaType.parseMediaType("application/pdf"));

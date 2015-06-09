@@ -16,11 +16,11 @@ import com.es.masjid.alhuda.model.DailyScheduleBean;
 
 @PropertySource("classpath:application.properties")
 @Controller
-public class DailyScheduleController {
+public class RestBackendController {
 	
 	@Resource
 	private Environment env;	
-	Logger logger = LoggerFactory.getLogger(DailyScheduleController.class);
+	Logger logger = LoggerFactory.getLogger(RestBackendController.class);
 	
 	@RequestMapping(value={"/dailySchedule"}, method=RequestMethod.GET)
 	public @ResponseBody DailyScheduleBean dailySchedule(){

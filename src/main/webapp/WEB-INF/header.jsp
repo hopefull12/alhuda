@@ -41,7 +41,7 @@
                                     </li>
                                 </ul>
                             </li>                            
-                            <li><a href="underconstruction.html"><div>Prayer Times</div></a>
+                            <li><a href="ptPdffiles.html"><div>Prayer Times</div></a>
                             </li>      
                             <li><a href="donate.html"><div>Donations</div></a>
                             </li> 

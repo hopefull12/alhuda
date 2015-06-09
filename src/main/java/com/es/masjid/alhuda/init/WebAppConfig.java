@@ -1,5 +1,7 @@
 package com.es.masjid.alhuda.init;
 
+import java.util.Properties;
+
 import javax.annotation.Resource;
 
 import org.springframework.context.annotation.Bean;
@@ -8,6 +10,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.ResourceBundleMessageSource;
 import org.springframework.core.env.Environment;
+import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
@@ -26,6 +29,7 @@ public class WebAppConfig extends WebMvcConfigurerAdapter {
 	@Resource
 	private Environment env;
 	
+	@Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/demos/**").addResourceLocations("/demos/");
         registry.addResourceHandler("/css/**").addResourceLocations("/css/");
@@ -68,5 +72,22 @@ public class WebAppConfig extends WebMvcConfigurerAdapter {
 	public ViewResolver viewResolver() {
 	return new TilesViewResolver();
 	}	
+	
+//	@Bean
+//	public JavaMailSenderImpl mailSender(){
+//		JavaMailSenderImpl ms = new JavaMailSenderImpl();
+//		ms.setHost("smtp.gmail.com");
+//		ms.setPort(25);
+//		ms.setUsername("muneer.yachb@gmail.com");
+//		ms.setPassword("");
+//		
+//		Properties javaMailProperties= new Properties();
+//		javaMailProperties.put("mail.transport.protocol", "smtp");
+//		javaMailProperties.put("mail.smtp.auth", "true");
+//		javaMailProperties.put("mail.smtp.starttls.enable", "true");
+//		ms.setJavaMailProperties(javaMailProperties);
+//		return ms;
+//	}
+	
 
 }
