@@ -12,8 +12,8 @@
                     <!-- Logo
                     ============================================= -->
                     <div id="logo">
-                        <a href="home.html" class="standard-logo" data-dark-logo="images/logo-dark.png"><img src="images/alhuda/alhuda-logo1.png" alt="AlHuda Logo"></a>
-                        <a href="home.html" class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img src="images/alhuda/alhuda-logo1.png" alt="AlHuda Logo"></a>
+                        <a href="home.html" class="standard-logo" data-dark-logo="images/logo-dark.png"><img src="${pageContext.request.contextPath}/images/alhuda/alhuda-logo1.png" alt="AlHuda Logo"></a>
+                        <a href="home.html" class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img src="${pageContext.request.contextPath}/images/alhuda/alhuda-logo1.png" alt="AlHuda Logo"></a>
                     </div><!-- #logo end -->
 
                     <!-- Primary Navigation
@@ -41,7 +41,7 @@
                                     </li>
                                 </ul>
                             </li>                            
-                            <li><a href="ptPdffiles.html"><div>Prayer Times</div></a>
+                            <li><a href="ptPDFFiles.html"><div>Prayer Times</div></a>
                             </li>      
                             <li><a href="donate.html"><div>Donations</div></a>
                             </li> 

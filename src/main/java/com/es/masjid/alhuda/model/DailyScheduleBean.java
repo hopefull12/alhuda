@@ -27,7 +27,7 @@ public class DailyScheduleBean {
 		return fajarBeginTime;
 	}
 	public void setFajarBeginTime(String fajarBeginTime) {
-		this.fajarBeginTime = fajarBeginTime;
+		this.fajarBeginTime =  fajarBeginTime;
 	}
 	public String getFajarIqamaTime() {
 		return fajarIqamaTime;

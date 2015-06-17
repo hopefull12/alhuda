@@ -20,14 +20,22 @@
 	background-color: #FFF;
 }
 
-.table > thead > tr > th.nextprayer, .table > tbody > tr > td.nextprayer {
+.table > thead > tr > th.nextprayer, .table > tbody > tr > td.nextprayer, .table > tbody > tr > th.nextprayer, .table > tr > th.nextprayer, .table > tr > td.nextprayer {
   color: #46C73D;
   background-color: #46C73D;
+}
+
+
+#prayer-times .prayer-counter-title {
+	text-align: right;
 }
 
 #prayer-times table th, #prayer-times table td {
 	text-align: center;
 }
+
+#countdown-wrapper { clear: left; float: left; position: relative; left: 80%; }
+
 
 #prayer-times h3, h4{
 	margin-bottom: 5px;
@@ -90,5 +98,6 @@
 
 .news-row {
 	word-wrap: break-word;
-	color: red
+	color: red;
+	font-size: 16px;
 }

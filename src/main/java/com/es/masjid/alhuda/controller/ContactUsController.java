@@ -2,11 +2,9 @@ package com.es.masjid.alhuda.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
-import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.es.masjid.alhuda.service.MasjidService;
@@ -29,7 +27,7 @@ public class ContactUsController {
 	@RequestMapping(value={"/contactus"}, method=RequestMethod.POST)
 	public ModelAndView sendEmail() {
 		
-    	// creates a simple e-mail object
+    	//    creates a simple e-mail object
         SimpleMailMessage email = new SimpleMailMessage();
         email.setTo("muneer.yachb@gmail.com");
         email.setSubject("Test");

@@ -34,7 +34,7 @@ public class MasjidService {
 		RestTemplate restTemplate = new RestTemplate();
 		String dailScheduleURL = env.getRequiredProperty(REST_DAILY_SCHEDULE_URL);
 		
-		logger.info("Daily schedule URL: "+dailScheduleURL);
+		logger.info("Daily  schedule URL: "+dailScheduleURL);
 		
 		DailyScheduleBean bean = restTemplate.getForObject(dailScheduleURL, DailyScheduleBean.class);
 		

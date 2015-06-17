@@ -10,7 +10,12 @@ public class EventsController {
 	
 	@RequestMapping(value={"/events"}, method=RequestMethod.GET)
 	public ModelAndView showEvents() {
-		return new ModelAndView("events");
+		return new ModelAndView("calendarTile");
+	}		
+	
+	@RequestMapping(value={"/events/{eventId}"}, method=RequestMethod.GET)
+	public ModelAndView showEvent() {
+		return new ModelAndView("eventTile");
 	}		
 
 }

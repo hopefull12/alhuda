@@ -28,6 +28,14 @@
 		<put-attribute name="body" value="/WEB-INF/contact.jsp" />
 	</definition>	
 	
+	<definition name="calendarTile" extends="baseTile">
+		<put-attribute name="body" value="/WEB-INF/eventCalendar.jsp" />
+	</definition>	
+	
+	<definition name="eventTile" extends="baseTile">
+		<put-attribute name="body" value="/WEB-INF/eventdetails.jsp" />
+	</definition>		
+	
 	<definition name="underConstructionTile" extends="baseTile">
 		<put-attribute name="body" value="/WEB-INF/underConstruction.jsp" />
 	</definition>	

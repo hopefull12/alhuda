@@ -310,7 +310,23 @@
                                 <p data-caption-animate="fadeInUp" data-caption-delay="200">Please support the masjid project &amp; school construction projects for building a better community.</p>
                             </div>
                         </div>
-                    </div>        
+                    </div>
+                    <div class="swiper-slide dark" style="background-image: url('<spring:eval expression="@environment.getProperty('alhuda.images')" />al-new-model3.jpg');">
+                        <div class="container clearfix">
+                            <div class="slider-caption slider-caption-center">
+                                <h2 data-caption-animate="fadeInUp"></h2>
+                                <p data-caption-animate="fadeInUp" data-caption-delay="200"></p> 
+                            </div>
+                        </div>
+                    </div>               
+                    <div class="swiper-slide dark" style="background-image: url('<spring:eval expression="@environment.getProperty('alhuda.images')" />al-new-model4.jpg');">
+                        <div class="container clearfix">
+                            <div class="slider-caption slider-caption-center">
+                                <h2 data-caption-animate="fadeInUp"></h2>
+                                <p data-caption-animate="fadeInUp" data-caption-delay="200"></p> 
+                            </div>
+                        </div>
+                    </div>         
                     <div class="swiper-slide dark" style="background-image: url('<spring:eval expression="@environment.getProperty('alhuda.images')" />al-new-model6.jpg');">
                         <div class="container clearfix">
                             <div class="slider-caption slider-caption-center">
@@ -318,7 +334,15 @@
                                 <p data-caption-animate="fadeInUp" data-caption-delay="200">Masjid Alhuda Expansion Project</p> 
                             </div>
                         </div>
-                    </div>                                                    
+                    </div>                        
+                    <div class="swiper-slide dark" style="background-image: url('<spring:eval expression="@environment.getProperty('alhuda.images')" />al-new-model5.jpg');">
+                        <div class="container clearfix">
+                            <div class="slider-caption slider-caption-center">
+                                <h2 data-caption-animate="fadeInUp"></h2>
+                                <p data-caption-animate="fadeInUp" data-caption-delay="200"></p> 
+                            </div>
+                        </div>
+                    </div>                              
                       
                 </div>
                 <div id="slider-arrow-left"><i class="icon-angle-left"></i></div>
@@ -502,9 +526,7 @@
 
                         });
 
-                    </script>           
-                    
-                    <!--  -->                                                
+                    </script>                                                           
 
                     <div class="clear"></div>
                     

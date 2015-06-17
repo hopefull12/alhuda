@@ -14,7 +14,7 @@
 
                         <div class="list-group">
                         	<c:forEach var="fileName" items="${ptPdfFiles}">
-								<a class="list-group-item" target="_blank" href="http://localhost:8080/alhuda/ptPDFFiles/${fileName}">${fileName}</a>
+								<a class="list-group-item" target="_blank" href="ptPDFFiles/${fileName}">${fileName}</a>
                             </c:forEach>                          
                         </div>
 
