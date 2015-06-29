@@ -50,17 +50,16 @@ public class MasjidService {
 		return fileNames;				
 	}	
 	
-	public InputStream getFileByFileName(String fileName) throws IOException{
+	public ByteArrayResource getFileByFileName(String fileName) throws IOException{
 		
 		RestTemplate restTemplate = new RestTemplate();
-		String dailScheduleURL = env.getRequiredProperty(REST_PRAYERTIME_PDF_URL);
+		String ptPDFFileURL = env.getRequiredProperty(REST_PRAYERTIME_PDF_URL) + "/" + fileName;
 		
-		logger.info("Daily schedule URL: "+dailScheduleURL);
+		logger.info("Prayer Time PDF file download URL: "+ptPDFFileURL);
 		
-		ByteArrayResource bean = restTemplate.getForObject(dailScheduleURL, ByteArrayResource.class);
+		ByteArrayResource bean = restTemplate.getForObject(ptPDFFileURL, ByteArrayResource.class);
 		
-		
-		return bean.getInputStream();		
+		return bean;		
 		
 	}	
 }

@@ -22,7 +22,8 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/animate.css" type="text/css" />
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/magnific-popup.css" type="text/css" />
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/responsive.css" type="text/css" />
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/calendar.css" type="text/css" />    
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/calendar.css" type="text/css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/colors.css" type="text/css" />     
     
     <!-- Alhuda Stylesheets
     ============================================= -->    

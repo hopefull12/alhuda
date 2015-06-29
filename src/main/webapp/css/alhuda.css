@@ -1,4 +1,6 @@
-
+body {
+	font-size: 16px;
+}
 
 /* Menu styles */
 #primary-menu ul li a {
@@ -62,9 +64,11 @@
 	
 }
 
+/*
 .form-control {
 	width: 35%;
 }
+*/
 
 /* Audio Video */
 

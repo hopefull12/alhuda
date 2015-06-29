@@ -5,6 +5,7 @@ import java.io.InputStream;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.ByteArrayResource;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -36,6 +37,11 @@ public class StaticPageController {
 		return new ModelAndView("masjidBoardTile");
 	}		
 	
+	@RequestMapping(value={"/masjidExpansionProject"}, method=RequestMethod.GET)
+	public ModelAndView masjidExpansionProject() {
+		return new ModelAndView("masjidExpansionTile");
+	}	
+	
 	@RequestMapping(value={"/underconstruction"}, method=RequestMethod.GET)
 	public ModelAndView underConstruction() {
 		return new ModelAndView("underConstructionTile");
@@ -53,14 +59,14 @@ public class StaticPageController {
 	@RequestMapping(value = "/ptPDFFiles/{fileName}", method = RequestMethod.GET)
 	public ResponseEntity<InputStreamResource> downloadPDFFile(@PathVariable("fileName") String fileName)
 	                                                                  throws IOException {
-		InputStream is = masjidService.getFileByFileName(fileName);
+		ByteArrayResource is = masjidService.getFileByFileName(fileName);
 		
 	    HttpHeaders respHeaders = new HttpHeaders();
 	    respHeaders.setContentType(MediaType.parseMediaType("application/pdf"));
-	    respHeaders.setContentLength(12345678);
-	    respHeaders.setContentDispositionFormData("attachment", fileName);
+	    respHeaders.setContentLength(is.contentLength());
+	    //respHeaders.setContentDispositionFormData("attachment", fileName+".pdf");
 	    System.out.println();
-	    InputStreamResource isr = new InputStreamResource(is);
+	    InputStreamResource isr = new InputStreamResource(is.getInputStream());
 	    return new ResponseEntity<InputStreamResource>(isr, respHeaders, HttpStatus.OK);
 	}	
 	

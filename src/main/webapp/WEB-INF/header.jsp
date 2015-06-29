@@ -28,7 +28,7 @@
                                     <li><a href="board.html"><div>Board of Trustees</div></a>
 
                                     </li>
-                                    <li><a href="underconstruction.html"><div>Masjid Expansion</div></a>
+                                    <li><a href="masjidExpansionProject.html"><div>Masjid Expansion</div></a>
                                     </li>
                                 </ul>
                             </li>

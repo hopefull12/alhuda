@@ -26,7 +26,7 @@
 
                         <div class="team">
                             <div class="team-desc">
-                                <div class="team-title"><h4>Rezwan Al-Haque</h4><span>President</span></div>
+                                <div class="team-title"><h4>Farooq Patel</h4><span>President</span></div>
                                 <a href="#" class="social-icon inline-block si-small si-light si-rounded si-facebook">
                                     <i class="icon-facebook"></i>
                                     <i class="icon-facebook"></i>
@@ -39,7 +39,7 @@
                                     <i class="icon-gplus"></i>
                                     <i class="icon-gplus"></i>
                                 </a>
-                                
+                                <p><strong>Phone:</strong> (630) 667-1110 </p>
 								                              
                                 
                             </div>
@@ -48,6 +48,29 @@
                     </div>
 
                     <div class="col_one_third">
+
+                        <div class="team">
+                            <div class="team-desc">
+                                <div class="team-title"><h4>Abdul Mannan</h4><span>General Secretary</span></div>
+                                <a href="#" class="social-icon inline-block si-small si-light si-rounded si-facebook">
+                                    <i class="icon-facebook"></i>
+                                    <i class="icon-facebook"></i>
+                                </a>
+                                <a href="#" class="social-icon inline-block si-small si-light si-rounded si-twitter">
+                                    <i class="icon-twitter"></i>
+                                    <i class="icon-twitter"></i>
+                                </a>
+                                <a href="#" class="social-icon inline-block si-small si-light si-rounded si-gplus">
+                                    <i class="icon-gplus"></i>
+                                    <i class="icon-gplus"></i>
+                                </a>
+                                <p><strong>Phone:</strong> (331) 492-5154 </p> 
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col_one_third col_last">
 
                         <div class="team">
                             <div class="team-desc">
@@ -63,31 +86,8 @@
                                 <a href="#" class="social-icon inline-block si-small si-light si-rounded si-gplus">
                                     <i class="icon-gplus"></i>
                                     <i class="icon-gplus"></i>
-                                </a>
-                                <p><strong>Phone:</strong> 630-816-0972 </p> 
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="col_one_third col_last">
-
-                        <div class="team">
-                            <div class="team-desc">
-                                <div class="team-title"><h4>Jamil Zara</h4><span>General Secretary</span></div>
-                                <a href="#" class="social-icon inline-block si-small si-light si-rounded si-facebook">
-                                    <i class="icon-facebook"></i>
-                                    <i class="icon-facebook"></i>
-                                </a>
-                                <a href="#" class="social-icon inline-block si-small si-light si-rounded si-twitter">
-                                    <i class="icon-twitter"></i>
-                                    <i class="icon-twitter"></i>
-                                </a>
-                                <a href="#" class="social-icon inline-block si-small si-light si-rounded si-gplus">
-                                    <i class="icon-gplus"></i>
-                                    <i class="icon-gplus"></i>
                                 </a>            
-                                <p><strong>Phone:</strong> 708-744-2421 </p>                    
+                                <p><strong>Phone:</strong> (630) 816-0972 </p>                    
                             </div>
                         </div>
 
@@ -99,7 +99,7 @@
 
                         <div class="team">
                             <div class="team-desc">
-                                <div class="team-title"><h4>Asif Sabri</h4><span></span></div>
+                                <div class="team-title"><h4>Mir Maqsood Ali</h4><span>Treasurer</span></div>
                                 <a href="#" class="social-icon inline-block si-small si-light si-rounded si-facebook">
                                     <i class="icon-facebook"></i>
                                     <i class="icon-facebook"></i>
@@ -113,7 +113,7 @@
                                     <i class="icon-gplus"></i>
                                 </a>
                                 
-								<p><strong>Phone:</strong> 630-202-1992 </p>                                
+								<p><strong>Phone:</strong> (630) 825-5432 </p>                                
                                 
                             </div>
                         </div>
@@ -124,7 +124,7 @@
 
                         <div class="team">
                             <div class="team-desc">
-                                <div class="team-title"><h4>Mir Maqsood Ali</h4><span></span></div>
+                                <div class="team-title"><h4>Javed Akram</h4><span>Zakat Committee</span></div>
                                 <a href="#" class="social-icon inline-block si-small si-light si-rounded si-facebook">
                                     <i class="icon-facebook"></i>
                                     <i class="icon-facebook"></i>
@@ -137,7 +137,7 @@
                                     <i class="icon-gplus"></i>
                                     <i class="icon-gplus"></i>
                                 </a>
-                                <p><strong>Phone:</strong> 630-825-5432 </p>
+                                <p><strong>Phone:</strong> (708) 404-2525 </p>
                             </div>
                         </div>
 
@@ -147,7 +147,7 @@
 
                         <div class="team">
                             <div class="team-desc">
-                                <div class="team-title"><h4>Ahmed Karim</h4><span></span></div>
+                                <div class="team-title"><h4>Mustafa Abdullah</h4><span>Zakat Committee</span></div>
                                 <a href="#" class="social-icon inline-block si-small si-light si-rounded si-facebook">
                                     <i class="icon-facebook"></i>
                                     <i class="icon-facebook"></i>
@@ -161,7 +161,7 @@
                                     <i class="icon-gplus"></i>
                                 </a>                             
                                 
-                                <p><strong>Phone:</strong> 630-205-6786 </p>     
+                                <p><strong>Phone:</strong> (847) 361-6982 </p>     
                             </div>
                         </div>
 
@@ -173,7 +173,7 @@
 
                         <div class="team">
                             <div class="team-desc">
-                                <div class="team-title"><h4>Abdul-Wahid Karim</h4><span></span></div>
+                                <div class="team-title"><h4>Jamil Zara</h4><span>Zakat Committee</span></div>
                                 <a href="#" class="social-icon inline-block si-small si-light si-rounded si-facebook">
                                     <i class="icon-facebook"></i>
                                     <i class="icon-facebook"></i>
@@ -187,7 +187,7 @@
                                     <i class="icon-gplus"></i>
                                 </a>
                                 
-								<p></p>                                
+								<p><strong>Phone:</strong> (708) 744-2421</p>                                
                                 
                             </div>
                         </div>
@@ -198,7 +198,7 @@
 
                         <div class="team">
                             <div class="team-desc">
-                                <div class="team-title"><h4>Dawood Gul</h4><span></span></div>
+                                <div class="team-title"><h4>Dawood Gul</h4><span>Auditor</span></div>
                                 <a href="#" class="social-icon inline-block si-small si-light si-rounded si-facebook">
                                     <i class="icon-facebook"></i>
                                     <i class="icon-facebook"></i>
@@ -211,7 +211,7 @@
                                     <i class="icon-gplus"></i>
                                     <i class="icon-gplus"></i>
                                 </a>
-                                <p><strong>Phone:</strong> 630-205-4817 </p>  
+                                <p><strong>Phone:</strong> (630) 205-4817 </p>  
                             </div>
                         </div>
 
@@ -221,7 +221,7 @@
 
                         <div class="team">
                             <div class="team-desc">
-                                <div class="team-title"><h4>Mohammed Farooq Patel</h4><span></span></div>
+                                <div class="team-title"><h4>Imran Khan</h4><span></span></div>
                                 <a href="#" class="social-icon inline-block si-small si-light si-rounded si-facebook">
                                     <i class="icon-facebook"></i>
                                     <i class="icon-facebook"></i>
@@ -233,7 +233,8 @@
                                 <a href="#" class="social-icon inline-block si-small si-light si-rounded si-gplus">
                                     <i class="icon-gplus"></i>
                                     <i class="icon-gplus"></i>
-                                </a>                                
+                                </a>         
+                                <p><strong>Phone:</strong> (847) 909-9624 </p>                       
                             </div>
                         </div>
 
@@ -245,7 +246,7 @@
 
                         <div class="team">
                             <div class="team-desc">
-                                <div class="team-title"><h4>Jawed Akram</h4><span></span></div>
+                                <div class="team-title"><h4>Rezwan ul Haque</h4><span></span></div>
                                 <a href="#" class="social-icon inline-block si-small si-light si-rounded si-facebook">
                                     <i class="icon-facebook"></i>
                                     <i class="icon-facebook"></i>
@@ -259,7 +260,7 @@
                                     <i class="icon-gplus"></i>
                                 </a>
                                 
-								<p><strong>Phone:</strong> 708-404-2525 </p>                              
+								<p><strong>Phone:</strong> (847)  401-1435 </p>                              
                                 
                             </div>
                         </div>
@@ -283,7 +284,7 @@
                                     <i class="icon-gplus"></i>
                                     <i class="icon-gplus"></i>
                                 </a>
-                                
+                                <p><strong>Phone:</strong> (630) 650-8266 </p> 
                             </div>
                         </div>
 
@@ -293,7 +294,7 @@
 
                         <div class="team">
                             <div class="team-desc">
-                                <div class="team-title"><h4>Imran Khan</h4><span></span></div>
+                                <div class="team-title"><h4>Wahid Kareem</h4><span></span></div>
                                 <a href="#" class="social-icon inline-block si-small si-light si-rounded si-facebook">
                                     <i class="icon-facebook"></i>
                                     <i class="icon-facebook"></i>
@@ -305,38 +306,16 @@
                                 <a href="#" class="social-icon inline-block si-small si-light si-rounded si-gplus">
                                     <i class="icon-gplus"></i>
                                     <i class="icon-gplus"></i>
-                                </a>                                
+                                </a>
+                                
+								<p><strong>Phone:</strong> (630) 205-1285 </p>                                
+                                
                             </div>
                         </div>
 
                     </div>                    
     
                     <div class="clear"></div>
-                    
-                    <div class="col_one_third">
-
-                        <div class="team">
-                            <div class="team-desc">
-                                <div class="team-title"><h4>Abdul Mannan Khan</h4><span></span></div>
-                                <a href="#" class="social-icon inline-block si-small si-light si-rounded si-facebook">
-                                    <i class="icon-facebook"></i>
-                                    <i class="icon-facebook"></i>
-                                </a>
-                                <a href="#" class="social-icon inline-block si-small si-light si-rounded si-twitter">
-                                    <i class="icon-twitter"></i>
-                                    <i class="icon-twitter"></i>
-                                </a>
-                                <a href="#" class="social-icon inline-block si-small si-light si-rounded si-gplus">
-                                    <i class="icon-gplus"></i>
-                                    <i class="icon-gplus"></i>
-                                </a>
-                                
-								<p></p>                                
-                                
-                            </div>
-                        </div>
-
-                    </div>
 
                     <div class="col_one_third">
 
@@ -355,7 +334,7 @@
                                     <i class="icon-gplus"></i>
                                     <i class="icon-gplus"></i>
                                 </a>
-                                
+                                <p><strong>Phone:</strong> (847) 757-5911 </p>
                             </div>
                         </div>
 
@@ -365,7 +344,7 @@
 
                         <div class="team">
                             <div class="team-desc">
-                                <div class="team-title"><h4>Abu Bakr El-Houmaidi</h4><span></span></div>
+                                <div class="team-title"><h4>Ahmed Karim</h4><span></span></div>
                                 <a href="#" class="social-icon inline-block si-small si-light si-rounded si-facebook">
                                     <i class="icon-facebook"></i>
                                     <i class="icon-facebook"></i>
@@ -377,7 +356,8 @@
                                 <a href="#" class="social-icon inline-block si-small si-light si-rounded si-gplus">
                                     <i class="icon-gplus"></i>
                                     <i class="icon-gplus"></i>
-                                </a>                                
+                                </a>        
+                                <p><strong>Phone:</strong> (630) 205-6786 </p>                        
                             </div>
                         </div>
 

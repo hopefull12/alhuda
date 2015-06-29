@@ -8,7 +8,7 @@
         				<div class="news-row-container col_full text-center">
 		                    <h4>
 		                        <div class="text-rotater text-center" data-separator="|" data-rotate="bounceIn" data-speed="3500">
-		                             <span class="news-row t-rotate"> Moon has been sighted. Id Mubarak to all.|Id namaz will be at 9:30 pm inshallah.
+		                             <span class="news-row t-rotate"> Moon has been sighted yesterday. Id Mubarak to all.|Id namaz will be at 9:30 pm inshallah.
 		                             Parents please attend
 		                             the teachers/parents conference meeting this coming weekend</span>  
 		                        </div>
@@ -25,11 +25,8 @@
                                 <div class="slider-wrap">
                                     <div class="slide">
                                   
-                                        <div class="testi-content text-center">
-                                        	
-                                            <p class="news-row">The Chicago Hilal Committee will meet on Wednesday, June 17, 2015 (Shaban 29, 1436) to determine the start of Ramadan. 
-                                            If the moon is seen on Wednesday, June 17th, Ramadan will begin on Thursday, June 18th. 
-                                            If the moon is ..<a href="http://chicagohilal.org/ramadan-1436/" target="_blank">Read More</p>                                            
+                                        <div class="testi-content text-center">                                        	
+                                            <p class="news-row">The moon has been sighted on June 17th! </p>                                            
                                         </div>
                                     </div>                   
                                 </div>
@@ -46,7 +43,7 @@
                           <thead>
                             <tr>
                               <th></th>
-                              <th><h3>Fazar</h3></th>
+                              <th><h3>Fajr</h3></th>
                               <th><h3>Sunrise</h3></th>
                               <th><h3>Dhuhr</h3></th>
                               <th><h3>Asr</h3></th>
@@ -103,7 +100,7 @@
                               <td class="success"><h4><span class="subtitle"><strong>Iqama</strong></span></h4></td>                              
                             </tr>
                             <tr>                             
-                              <th class="nextprayer"><h3>Fajar</h3></th>           
+                              <th class="nextprayer"><h3>Fajir</h3></th>           
                               <td><h4><span class="subtitle">${dailySchedule.fajarBeginTime}</span></h4></td>       
                               <td class="success"><h4><span class="subtitle">${dailySchedule.fajarIqamaTime}</span></h4></td>  
                               
@@ -214,6 +211,7 @@
 						    } else {
 						    	tableIndex = nextPrayerIndex + 2;
 						    	tableIndex = nextPrayerIndex + 2;
+						    	secondTableIndex = nextPrayerIndex + 2;
 						    }
 						    
 						    if(currentCST.getDay() == 5){
@@ -299,26 +297,32 @@
         	</div>
         </section>
 
-        <section id="slider" class="slider-parallax swiper_wrapper clearfix">
+        <section id="slider" class="swiper_wrapper clearfix">
 
             <div class="swiper-container swiper-parent">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide dark" style="background-image: url('<spring:eval expression="@environment.getProperty('alhuda.images')" />al-new-model2.jpg');">
-                        <div class="container clearfix">
-                            <div class="slider-caption slider-caption-center">
-                                <h2 data-caption-animate="fadeInUp">Masjid Al Huda Expansion</h2>
-                                <p data-caption-animate="fadeInUp" data-caption-delay="200">Please support the masjid project &amp; school construction projects for building a better community.</p>
-                            </div>
-                        </div>
-                    </div>        
+                    	<a href="masjidExpansionProject.html">
+	                        <div class="container clearfix">                        	
+	                            <div class="slider-caption slider-caption-center">
+	                                <h2 data-caption-animate="fadeInUp">Masjid Al Huda Expansion</h2>
+	                                <p data-caption-animate="fadeInUp" data-caption-delay="200">Please support the masjid project &amp; school construction projects for building a better community.</p>
+	                            </div>                            
+	                        </div>
+                        </a>
+                    </div>
+                     
                     <div class="swiper-slide dark" style="background-image: url('<spring:eval expression="@environment.getProperty('alhuda.images')" />al-new-model6.jpg');">
-                        <div class="container clearfix">
-                            <div class="slider-caption slider-caption-center">
-                                <h2 data-caption-animate="fadeInUp">Support The Noble Cause</h2>
-                                <p data-caption-animate="fadeInUp" data-caption-delay="200">Masjid Alhuda Expansion Project</p> 
-                            </div>
-                        </div>
-                    </div>                                                    
+                    	<a href="masjidExpansionProject.html">
+	                        <div class="container clearfix">
+	                            <div class="slider-caption slider-caption-center">
+	                                <h2 data-caption-animate="fadeInUp">Support The Noble Cause</h2>
+	                                <p data-caption-animate="fadeInUp" data-caption-delay="200">Masjid Alhuda Expansion Project</p> 
+	                            </div>
+	                        </div>
+                        </a>
+                    </div>                        
+                            
                       
                 </div>
                 <div id="slider-arrow-left"><i class="icon-angle-left"></i></div>
@@ -332,6 +336,8 @@
                         paginationClickable: false,
                         slidesPerView: 1,
                         grabCursor: true,
+                        loop: true,
+                        
                         onSwiperCreated: function(swiper){
                             $('[data-caption-animate]').each(function(){
                                 var $toAnimateElement = $(this);
@@ -406,103 +412,17 @@
             <div class="content-wrap">
 
                 <div class="container clearfix">
+                            
                 
-                    <div class="fancy-title title-center title-dotted-border topmargin">
-                        <h3>Featured Videos</h3>
-                    </div>                 
-                
-                    <!-- Portfolio Items
-                    ============================================= -->
-                    <div id="portfolio" class="portfolio-2 clearfix">
+        
 
-
-                        <article class="portfolio-item pf-graphics pf-uielements">
-                            <div class="portfolio-image">
-                                <a href="#">
-                                    <iframe width="800" height="600" src="https://www.youtube.com/embed/9dBUEfoLsg0?rel=0" frameborder="0" allowfullscreen></iframe>
-                                </a>
-
-                            </div>
-                            <div class="portfolio-desc">
-                                <h3><a href="portfolio-single-video.html">Passionate Message</a></h3>
-                                <span>Alhuda Co Founders</span>
-                            </div>
-                        </article>
-
-                        <article class="portfolio-item pf-graphics pf-uielements">
-                            <div class="portfolio-image">
-                                <a href="#">                                    
-                                    <iframe width="800" height="600" src="https://www.youtube.com/embed/X1iIK9VBoVY?rel=0" frameborder="0" allowfullscreen></iframe>
-                                </a>
-
-                            </div>
-                            <div class="portfolio-desc">
-                                <h3><a href="portfolio-single-video.html">Masjid Alhuda Expansion Project</a></h3>
-                                <span>Virtual Tour</span>
-                            </div>
-                        </article>
-
-                    </div><!-- #portfolio end -->
-
-                    <!-- Portfolio Script
-                    ============================================= -->
-                    <script type="text/javascript">
-
-                        jQuery(window).load(function(){
-
-                            var $container = $('#portfolio');
-
-                            $container.isotope({ transitionDuration: '0.65s' });
-
-                            $('#portfolio-filter a').click(function(){
-                                $('#portfolio-filter li').removeClass('activeFilter');
-                                $(this).parent('li').addClass('activeFilter');
-                                var selector = $(this).attr('data-filter');
-                                $container.isotope({ filter: selector });
-                                return false;
-                            });
-
-                            $('#portfolio-shuffle').click(function(){
-                                $container.isotope('updateSortData').isotope({
-                                    sortBy: 'random'
-                                });
-                            });
-
-                            $(window).resize(function() {
-                                $container.isotope('layout');
-                            });
-
-                        });
-
-                    </script><!-- Portfolio Script End -->                                                                                     
+                                                                               
                     
                     <div class="clear"></div>                      
                 
 
                 </div>                          
-                    
-                    <script type="text/javascript">
-
-                        jQuery(document).ready(function($) {
-
-                            var ocEvents = $("#oc-events");
-
-                            ocEvents.owlCarousel({
-                                margin: 20,
-                                nav: true,
-                                navText: ['<i class="icon-angle-left"></i>','<i class="icon-angle-right"></i>'],
-                                autoplay: true,
-                                autoplayHoverPause: true,
-                                dots: true,
-                                responsive:{
-                                    0:{ items:1 },
-                                    1000:{ items:1 }
-                                }
-                            });
-
-                        });
-
-                    </script>           
+        
                     
                     <!--  -->                                                
 

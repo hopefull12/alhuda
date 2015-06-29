@@ -40,6 +40,10 @@
 		<put-attribute name="body" value="/WEB-INF/underConstruction.jsp" />
 	</definition>	
 	
+	<definition name="masjidExpansionTile" extends="baseTile">
+		<put-attribute name="body" value="/WEB-INF/masjid-expansion-project.jsp" />
+	</definition>	
+	
 	<!-- Ajax Tiles -->
 	<definition name="contactUsAjaxTile" template="/WEB-INF/ajax/contactUsAjax.jsp">		
 	</definition>	
