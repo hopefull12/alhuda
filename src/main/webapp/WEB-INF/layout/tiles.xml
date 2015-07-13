@@ -24,6 +24,10 @@
 		<put-attribute name="body" value="/WEB-INF/prayerTimePdfFiles.jsp" />
 	</definition>		
 	
+	<definition name="pdfFilesTile" extends="baseTile">
+		<put-attribute name="body" value="/WEB-INF/pdfFiles.jsp" />
+	</definition>	
+	
 	<definition name="contactTile" extends="baseTile">
 		<put-attribute name="body" value="/WEB-INF/contact.jsp" />
 	</definition>	

@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.es.masjid.alhuda.service.MasjidService;
+import com.es.masjid.shared.UploadedFilesBean;
 
 @Controller
 public class StaticPageController {
@@ -55,6 +56,15 @@ public class StaticPageController {
 		mv.addObject("ptPdfFiles", fileNames);
 		return mv;
 	}	
+	
+	@RequestMapping(value = "/ptPDFFiles2", method = RequestMethod.GET)
+	public ModelAndView displayPDFFiles2()
+	                                                                  throws IOException {
+		ModelAndView mv = new ModelAndView("pdfFilesTile");
+		UploadedFilesBean bean = masjidService.getPDFFiles2();
+		mv.addObject("ptPdfFiles", bean);
+		return mv;
+	}		
 	
 	@RequestMapping(value = "/ptPDFFiles/{fileName}", method = RequestMethod.GET)
 	public ResponseEntity<InputStreamResource> downloadPDFFile(@PathVariable("fileName") String fileName)

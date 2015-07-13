@@ -17,6 +17,7 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.es.masjid.alhuda.model.DailyScheduleBean;
+import com.es.masjid.shared.UploadedFilesBean;
 
 @PropertySource("classpath:application.properties")
 @Component
@@ -48,6 +49,14 @@ public class MasjidService {
 		logger.info("PDF File URL: "+pdfFilesURL);
 		List<String> fileNames = restTemplate.getForObject(pdfFilesURL, List.class);
 		return fileNames;				
+	}	
+	
+	public UploadedFilesBean getPDFFiles2() throws IOException{
+		RestTemplate restTemplate = new RestTemplate();
+		String pdfFilesURL = env.getRequiredProperty(REST_PRAYERTIME_PDF_URL);
+		logger.info("PDF File URL: "+pdfFilesURL);
+		UploadedFilesBean bean = restTemplate.getForObject(pdfFilesURL, UploadedFilesBean.class);
+		return bean;				
 	}	
 	
 	public ByteArrayResource getFileByFileName(String fileName) throws IOException{

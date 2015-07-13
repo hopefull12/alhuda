@@ -4,22 +4,10 @@
         <section id="prayer-times">
         	<div class="content-wrap">
         		<div class="container clearfix">
-        		
-        				<div class="news-row-container col_full text-center">
-		                    <h4>
-		                        <div class="text-rotater text-center" data-separator="|" data-rotate="bounceIn" data-speed="3500">
-		                             <span class="news-row t-rotate"> Moon has been sighted yesterday. Id Mubarak to all.|Id namaz will be at 9:30 pm inshallah.
-		                             Parents please attend
-		                             the teachers/parents conference meeting this coming weekend</span>  
-		                        </div>
-		                    </h4>         				
         				
-        				</div>
-        				
+        			<!-- 
                     <div class="col_full ">
 
-                        <!-- Testimonials
-                        ============================================= -->
                         <div class="fslider testimonial twitter-scroll" data-animation="slide" data-arrows="false">
                             <div class="flexslider">
                                 <div class="slider-wrap">
@@ -31,10 +19,10 @@
                                     </div>                   
                                 </div>
                             </div>
-                        </div><!-- .testimonial end -->
-
+                        </div>
+                    
                     </div>        				
-        				
+        			 -->	
 					<div class="clear"></div>
 	      
         			<div class="col_four_fifth">
