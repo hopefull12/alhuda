@@ -15,8 +15,6 @@ import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
-import org.springframework.web.servlet.view.JstlView;
-import org.springframework.web.servlet.view.UrlBasedViewResolver;
 import org.springframework.web.servlet.view.tiles3.TilesConfigurer;
 import org.springframework.web.servlet.view.tiles3.TilesViewResolver;
 
@@ -33,6 +31,7 @@ public class WebAppConfig extends WebMvcConfigurerAdapter {
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/demos/**").addResourceLocations("/demos/");
         registry.addResourceHandler("/css/**").addResourceLocations("/css/");
+        registry.addResourceHandler("/op-css/**").addResourceLocations("/op-css/");
         registry.addResourceHandler("/images/**").addResourceLocations("/images/");
         registry.addResourceHandler("/js/**").addResourceLocations("/js/");
         registry.addResourceHandler("/include/**").addResourceLocations("/include/");
@@ -73,21 +72,21 @@ public class WebAppConfig extends WebMvcConfigurerAdapter {
 	return new TilesViewResolver();
 	}	
 	
-//	@Bean
-//	public JavaMailSenderImpl mailSender(){
-//		JavaMailSenderImpl ms = new JavaMailSenderImpl();
-//		ms.setHost("smtp.gmail.com");
-//		ms.setPort(25);
-//		ms.setUsername("muneer.yachb@gmail.com");
-//		ms.setPassword("");
-//		
-//		Properties javaMailProperties= new Properties();
-//		javaMailProperties.put("mail.transport.protocol", "smtp");
-//		javaMailProperties.put("mail.smtp.auth", "true");
-//		javaMailProperties.put("mail.smtp.starttls.enable", "true");
-//		ms.setJavaMailProperties(javaMailProperties);
-//		return ms;
-//	}
+	@Bean
+	public JavaMailSenderImpl mailSender(){
+		JavaMailSenderImpl ms = new JavaMailSenderImpl();
+		ms.setHost("mail.masjidalhuda.org");
+		ms.setPort(25);
+		ms.setUsername("masjid@masjidalhuda.org");
+		ms.setPassword("");
+		
+		Properties javaMailProperties= new Properties();
+		javaMailProperties.put("mail.transport.protocol", "smtp");
+		javaMailProperties.put("mail.smtp.auth", "true");
+		javaMailProperties.put("mail.smtp.starttls.enable", "true");
+		ms.setJavaMailProperties(javaMailProperties);
+		return ms;
+	}
 	
 
 }

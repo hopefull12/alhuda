@@ -12,6 +12,9 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.core.io.FileSystemResource;
+import org.springframework.mail.MailException;
+import org.springframework.mail.MailSender;
+import org.springframework.mail.SimpleMailMessage;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.ModelAndView;
@@ -25,6 +28,9 @@ public class MasjidService {
 	
 	@Resource
 	private Environment env;	
+	
+    private MailSender mailSender;
+    private SimpleMailMessage templateMessage;	
 	
 	private static String REST_DAILY_SCHEDULE_URL = "rest.madmin.dailyschedule";
 	private static String REST_PRAYERTIME_PDF_URL = "rest.madmin.ptPdfFiles";
@@ -70,5 +76,43 @@ public class MasjidService {
 		
 		return bean;		
 		
+	}
+	
+    public void sendEmail(String to, String text) {
+
+        // Do the business calculations...
+
+        // Call the collaborators to persist the order...
+
+        // Create a thread safe "copy" of the template message and customize it
+        SimpleMailMessage msg = new SimpleMailMessage();
+        msg.setTo("");
+        msg.setSubject("Test Spring Email");
+        msg.setText("This is a test email");
+        try{
+            this.mailSender.send(msg);
+        }
+        catch (MailException ex) {
+            // simply log it and go on...
+            System.err.println(ex.getMessage());
+        }
+    }	
+
+	public MailSender getMailSender() {
+		return mailSender;
+	}
+
+	public void setMailSender(MailSender mailSender) {
+		this.mailSender = mailSender;
+	}
+
+	public SimpleMailMessage getTemplateMessage() {
+		return templateMessage;
+	}
+
+	public void setTemplateMessage(SimpleMailMessage templateMessage) {
+		this.templateMessage = templateMessage;
 	}	
+	
+	
 }

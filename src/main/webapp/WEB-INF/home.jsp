@@ -5,24 +5,37 @@
         	<div class="content-wrap">
         		<div class="container clearfix">
         				
-        			<!-- 
+        			
                     <div class="col_full ">
 
                         <div class="fslider testimonial twitter-scroll" data-animation="slide" data-arrows="false">
                             <div class="flexslider">
                                 <div class="slider-wrap">
+                                
+                                	
                                     <div class="slide">
                                   
                                         <div class="testi-content text-center">                                        	
-                                            <p class="news-row">The moon has been sighted on June 17th! </p>                                            
+                                            <p class="news-row">Moon has been Sighted!! Eid Mubarak! Eid is on Friday! </p>                                            
                                         </div>
-                                    </div>                   
+                                    </div>           
+                                     
+                                     
+                                      
+		                            <div class="slide">
+		                            	<div class="divcenter" style="width: 740px;">
+			                                <a href="#">
+			                                    <img src="images/alhuda/idcard.jpg" alt="Slide 1" style="width: 740px;">		                                    
+			                                </a>
+		                                </div>
+		                            </div>                                     
+                                            
                                 </div>
                             </div>
                         </div>
                     
                     </div>        				
-        			 -->	
+        			 
 					<div class="clear"></div>
 	      
         			<div class="col_four_fifth">

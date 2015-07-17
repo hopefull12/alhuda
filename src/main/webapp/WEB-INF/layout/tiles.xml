@@ -8,6 +8,20 @@
 		<put-attribute name="footer" value="/WEB-INF/footer.jsp" />
 	</definition>
 	
+	<definition name="baseSundaySchoolTile" template="/WEB-INF/sundayschoollayout.jsp">
+		<put-attribute name="header" value="/WEB-INF/sundayschoolheader.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/sundayschoolfooter.jsp" />
+	</definition>	
+	
+	<definition name="baseTestTile" template="/WEB-INF/testLayout.jsp">
+		<put-attribute name="header" value="/WEB-INF/testHeader.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/testFooter.jsp" />	
+	</definition>	
+	
+	<definition name="testTile" extends="baseTestTile">
+		<put-attribute name="body" value="/WEB-INF/testBody.jsp" />
+	</definition>	
+	
 	<definition name="homeTile" extends="baseTile">
 		<put-attribute name="body" value="/WEB-INF/home.jsp" />
 	</definition>	
@@ -42,6 +56,10 @@
 	
 	<definition name="underConstructionTile" extends="baseTile">
 		<put-attribute name="body" value="/WEB-INF/underConstruction.jsp" />
+	</definition>	
+	
+	<definition name="sundayschoolTile" extends="baseSundaySchoolTile">
+		<put-attribute name="body" value="/WEB-INF/sundayschool.jsp" />
 	</definition>	
 	
 	<definition name="masjidExpansionTile" extends="baseTile">

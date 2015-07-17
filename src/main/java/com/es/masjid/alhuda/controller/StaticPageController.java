@@ -48,6 +48,11 @@ public class StaticPageController {
 		return new ModelAndView("underConstructionTile");
 	}		
 	
+	@RequestMapping(value={"/sundayschool"}, method=RequestMethod.GET)
+	public ModelAndView sundaySchool() {
+		return new ModelAndView("baseSundaySchoolTile");
+	}	
+	
 	@RequestMapping(value = "/ptPDFFiles", method = RequestMethod.GET)
 	public ModelAndView displayPDFFiles()
 	                                                                  throws IOException {

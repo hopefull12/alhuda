@@ -1,0 +1,39 @@
+/* Sunday School Styles Begin*/
+
+#school-schedule {
+	max-width: 400px;
+}
+
+#school-schedule table th, #prayer-times table td {
+	text-align: center;
+}
+
+#ss-subjects {
+	list-style: none;
+}
+
+.ss-announcements a {
+	display: block;
+	color: #EEE;
+}
+
+.ss-announcements .note {
+	font-size: 14px;
+	font-style: italic;
+	display: block;
+}
+
+.blue .section, .section.blue{
+	
+	background-color: #82B9D7;
+	
+}
+
+.slider-caption h2 {
+  font-size: 78px;
+  letter-spacing: 3px;
+  text-transform: none;
+  margin-bottom: 50px;
+}
+
+/* Sunday School Styles End*/
