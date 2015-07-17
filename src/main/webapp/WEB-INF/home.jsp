@@ -5,14 +5,14 @@
         	<div class="content-wrap">
         		<div class="container clearfix">
         				
-        			
+        			<!--
                     <div class="col_full ">
 
                         <div class="fslider testimonial twitter-scroll" data-animation="slide" data-arrows="false">
                             <div class="flexslider">
                                 <div class="slider-wrap">
                                 
-                                	
+                                	  
                                     <div class="slide">
                                   
                                         <div class="testi-content text-center">                                        	
@@ -28,13 +28,16 @@
 			                                    <img src="images/alhuda/idcard.jpg" alt="Slide 1" style="width: 740px;">		                                    
 			                                </a>
 		                                </div>
-		                            </div>                                     
+		                            </div>  
+		                            
+		                                                               
                                             
                                 </div>
                             </div>
                         </div>
                     
-                    </div>        				
+                    </div>     
+                     -->   				
         			 
 					<div class="clear"></div>
 	      
