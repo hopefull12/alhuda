@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.es.masjid.alhuda.model.DailyScheduleBean;
 import com.es.masjid.alhuda.service.MasjidService;
 import com.es.masjid.shared.UploadedFilesBean;
 
@@ -32,6 +33,17 @@ public class StaticPageController {
 	public ModelAndView sundaySchoolFaculty() {
 		return new ModelAndView("sundayschoolfaculty");
 	}		
+	
+	@RequestMapping(value={"/opt"}, method=RequestMethod.GET)
+	public ModelAndView onlyPrayerTimes() {
+		
+		ModelAndView mv = new ModelAndView("onlyPrayerTimesTile");
+		
+		DailyScheduleBean bean = masjidService.getTodaySchedule();
+		mv.addObject("dailySchedule", bean);		
+		
+		return mv;
+	}	
 	
 	@RequestMapping(value={"/board"}, method=RequestMethod.GET)
 	public ModelAndView board() {
@@ -50,7 +62,7 @@ public class StaticPageController {
 	
 	@RequestMapping(value={"/sundayschool"}, method=RequestMethod.GET)
 	public ModelAndView sundaySchool() {
-		return new ModelAndView("baseSundaySchoolTile");
+		return new ModelAndView("sundayschoolTile");
 	}	
 	
 	@RequestMapping(value = "/ptPDFFiles", method = RequestMethod.GET)
@@ -71,16 +83,27 @@ public class StaticPageController {
 		return mv;
 	}		
 	
-	@RequestMapping(value = "/ptPDFFiles/{fileName}", method = RequestMethod.GET)
+	@RequestMapping(value = "/ptPDFFiles/{fileName}/", method = RequestMethod.GET)
 	public ResponseEntity<InputStreamResource> downloadPDFFile(@PathVariable("fileName") String fileName)
 	                                                                  throws IOException {
 		ByteArrayResource is = masjidService.getFileByFileName(fileName);
+		String fileExt = fileName.substring(fileName.indexOf("."), fileName.length());
+		String mimeTypeToUse = null;
+		System.out.println("The file ext is: "+fileExt);
+		
+		if(".pdf".equals(fileExt)){
+			mimeTypeToUse = "pdf";
+		}else if(".docx".equals(fileExt)){
+			mimeTypeToUse = "vnd.openxmlformats-officedocument.wordprocessingml.document";
+		}else if(".pptx".equals(fileExt)){
+			mimeTypeToUse = "vnd.ms-excel";
+		}
 		
 	    HttpHeaders respHeaders = new HttpHeaders();
-	    respHeaders.setContentType(MediaType.parseMediaType("application/pdf"));
+	    respHeaders.setContentType(MediaType.parseMediaType("application/"+mimeTypeToUse));
 	    respHeaders.setContentLength(is.contentLength());
 	    //respHeaders.setContentDispositionFormData("attachment", fileName+".pdf");
-	    System.out.println();
+	    
 	    InputStreamResource isr = new InputStreamResource(is.getInputStream());
 	    return new ResponseEntity<InputStreamResource>(isr, respHeaders, HttpStatus.OK);
 	}	

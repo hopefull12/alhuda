@@ -10,7 +10,7 @@ public class TestController {
 	
 	@RequestMapping(value={"/test"}, method=RequestMethod.GET)
 	public ModelAndView index() {
-		return new ModelAndView("test");
+		return new ModelAndView("testTile");
 	}		
 
 }

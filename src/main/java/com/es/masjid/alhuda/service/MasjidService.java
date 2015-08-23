@@ -68,7 +68,7 @@ public class MasjidService {
 	public ByteArrayResource getFileByFileName(String fileName) throws IOException{
 		
 		RestTemplate restTemplate = new RestTemplate();
-		String ptPDFFileURL = env.getRequiredProperty(REST_PRAYERTIME_PDF_URL) + "/" + fileName;
+		String ptPDFFileURL = env.getRequiredProperty(REST_PRAYERTIME_PDF_URL) + "/" + fileName +"/";
 		
 		logger.info("Prayer Time PDF file download URL: "+ptPDFFileURL);
 		

@@ -417,8 +417,45 @@
 
                 <div class="container clearfix">
                             
-                
-        
+                    <div class="fancy-title title-center title-dotted-border topmargin">
+                        <h3>Upcoming Events</h3>
+                    </div>                            
+                                            
+                    <div class="col_full ">
+
+                        <div class="fslider testimonial twitter-scroll" data-animation="slide" data-arrows="false">
+                            <div class="flexslider">
+                                <div class="slider-wrap">                                          
+                                                                       
+		                            <div class="slide">
+		                            	<div class="divcenter" style="width: 1056px;">
+			                                <a href="#">
+			                                    <img src="images/alhuda/youthspa.jpg" alt="Slide 1" style="width: 1056px;">		                                    
+			                                </a>
+		                                </div>
+		                            </div> 
+		                            <div class="slide">
+		                            	<div class="divcenter" style="width: 1056px;">
+			                                <a href="#">
+			                                    <img src="images/alhuda/youthopengym.jpg" alt="Slide 1" style="width: 1056px;">		                                    
+			                                </a>
+		                                </div>
+		                            </div>
+		                            <div class="slide">
+		                            	<div class="divcenter" style="width: 816px;">
+			                                <a href="#">
+			                                    <img src="images/alhuda/youthflyer2015.jpg" alt="Slide 1" style="width: 816px;">		                                    
+			                                </a>
+		                                </div>		                                		                                
+		                            </div>  
+		                            
+		                                                               
+                                            
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>        
 
                                                                                
                     

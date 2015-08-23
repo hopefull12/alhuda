@@ -3,6 +3,7 @@
 
 <tiles-definitions>
 
+	<!-- Layouts Start -->
 	<definition name="baseTile" template="/WEB-INF/homelayout.jsp">
 		<put-attribute name="header" value="/WEB-INF/header.jsp" />
 		<put-attribute name="footer" value="/WEB-INF/footer.jsp" />
@@ -17,13 +18,20 @@
 		<put-attribute name="header" value="/WEB-INF/testHeader.jsp" />
 		<put-attribute name="footer" value="/WEB-INF/testFooter.jsp" />	
 	</definition>	
+	<!-- Layouts End -->
 	
 	<definition name="testTile" extends="baseTestTile">
-		<put-attribute name="body" value="/WEB-INF/testBody.jsp" />
+		<put-attribute name="body" value="/WEB-INF/onlyPrayerTimes.jsp" />
 	</definition>	
 	
 	<definition name="homeTile" extends="baseTile">
 		<put-attribute name="body" value="/WEB-INF/home.jsp" />
+	</definition>	
+	
+	<definition name="onlyPrayerTimesTile" extends="baseTile">
+		<put-attribute name="header" value="/WEB-INF/emptyHeader.jsp" />
+		<put-attribute name="body" value="/WEB-INF/onlyPrayerTimes.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/emptyFooter.jsp" />
 	</definition>	
 	
 	<definition name="donationTile" extends="baseTile">

@@ -52,6 +52,38 @@ body {
 	white-space: nowrap;
 }
 
+/* Only Prayer Times Page Styles Start*/
+
+.opt-title {
+	font-size: 50px;	
+}
+
+.opt-title-span {
+	display: block;
+	margin: 0 auto;	
+	width: 500px;
+	padding: 0 0 75px 0;
+}
+
+.opt-container {
+	width: 100%;
+	padding: 0 100px 0 50px;
+}
+
+.opt-container table td {
+	height: 100px;
+}
+
+.opt-container thead h3, .opt-container thead h4{
+	font-size: 40px;
+}
+
+.opt-container h3, .opt-container h4{
+	font-size: 30px;
+}
+
+/* Only Prayer Times Page Styles End*/
+
 .icons-donationbox-container{
 	width: 70%;
     margin: 0 auto;

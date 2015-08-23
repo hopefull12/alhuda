@@ -15,19 +15,19 @@ public class HomeController {
 	@Autowired
 	private MasjidService masjidService;
 	
-	@RequestMapping(value={"main"}, method=RequestMethod.GET)
-	public ModelAndView index() {
-		
-		ModelAndView mv = new ModelAndView("main");
-		
-		DailyScheduleBean bean = masjidService.getTodaySchedule();
-		mv.addObject("dailySchedule", bean);
-		
-		return mv;
-	}	
+//	@RequestMapping(value={"main"}, method=RequestMethod.GET)
+//	public ModelAndView index() {
+//		
+//		ModelAndView mv = new ModelAndView("main");
+//		
+//		DailyScheduleBean bean = masjidService.getTodaySchedule();
+//		mv.addObject("dailySchedule", bean);
+//		
+//		return mv;
+//	}	
 	
 	@RequestMapping(value={"/", "home"}, method=RequestMethod.GET)
-	public ModelAndView home() {
+	public ModelAndView home() {		
 		
 		ModelAndView mv = new ModelAndView("homeTile");
 		
