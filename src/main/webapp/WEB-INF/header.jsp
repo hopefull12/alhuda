@@ -52,7 +52,7 @@
                                     <li><a href="http://sites.alhudaacademy.com/alhudamain/"><div>Full Time School</div></a>
 
                                     </li>
-                                    <li><a href="sundayschool.html" target="_blank"><div>Sunday School</div></a>
+                                    <li><a href="http://www.alhudasundayschool.org" target="_blank"><div>Sunday School</div></a>
                                     </li>
                                     <li><a href="underconstruction.html"><div>Hifz &amp; Nazira School</div></a>
                                     </li>                                    

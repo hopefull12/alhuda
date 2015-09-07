@@ -426,25 +426,32 @@
                         <div class="fslider testimonial twitter-scroll" data-animation="slide" data-arrows="false">
                             <div class="flexslider">
                                 <div class="slider-wrap">                                          
-                                                                       
+                                                            
 		                            <div class="slide">
 		                            	<div class="divcenter" style="width: 1056px;">
 			                                <a href="#">
-			                                    <img src="images/alhuda/youthspa.jpg" alt="Slide 1" style="width: 1056px;">		                                    
+			                                    <img src="images/alhuda/haj-seminar.jpg" alt="Slide 1" style="width: 1056px;">		                                    
+			                                </a>
+		                                </div>
+		                            </div>                                                                       
+		                            <div class="slide">
+		                            	<div class="divcenter" style="width: 1056px;">
+			                                <a href="#">
+			                                    <img src="images/alhuda/YOUTHSPADAYPINK.jpg" alt="Slide 2" style="width: 1056px;">		                                    
 			                                </a>
 		                                </div>
 		                            </div> 
 		                            <div class="slide">
 		                            	<div class="divcenter" style="width: 1056px;">
 			                                <a href="#">
-			                                    <img src="images/alhuda/youthopengym.jpg" alt="Slide 1" style="width: 1056px;">		                                    
+			                                    <img src="images/alhuda/youthopengym.jpg" alt="Slide 3" style="width: 1056px;">		                                    
 			                                </a>
 		                                </div>
 		                            </div>
 		                            <div class="slide">
 		                            	<div class="divcenter" style="width: 816px;">
 			                                <a href="#">
-			                                    <img src="images/alhuda/youthflyer2015.jpg" alt="Slide 1" style="width: 816px;">		                                    
+			                                    <img src="images/alhuda/youthflyer2015.jpg" alt="Slide 4" style="width: 816px;">		                                    
 			                                </a>
 		                                </div>		                                		                                
 		                            </div>  
