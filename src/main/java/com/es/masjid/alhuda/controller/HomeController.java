@@ -33,6 +33,9 @@ public class HomeController {
 		
 		DailyScheduleBean bean = masjidService.getTodaySchedule();
 		mv.addObject("dailySchedule", bean);
+		mv.addObject("newsItems", masjidService.getItems("NEWS"));
+		mv.addObject("events", masjidService.getItems("EVENT"));
+		mv.addObject("adslist", masjidService.getItems("ADS"));
 		
 		return mv;
 	}	

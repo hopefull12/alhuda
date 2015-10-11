@@ -41,7 +41,7 @@
                                     </li>
                                 </ul>
                             </li>                            
-                            <li><a href="ptPDFFiles2.html"><div>Prayer Times</div></a>
+                            <li><a href="prayertimes.html"><div>Prayer Times</div></a>
                             </li>      
                             <li><a href="donate.html"><div>Donations</div></a>
                             </li> 
@@ -58,6 +58,7 @@
                                     </li>                                    
                                 </ul>
                             </li>
+                            <li><a href="downloads.html"><div>Downloads</div></a>
                             <li><a href="underconstruction.html"><div>Contact Us</div></a>
                             </li>                            
                         </ul>

@@ -1,34 +1,36 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 
         <section id="prayer-times">
         	<div class="content-wrap">
         		<div class="container clearfix">
         				
-        			<!--
+        			<c:if test="${fn:length(newsItems) gt 0}">
                     <div class="col_full ">
 
                         <div class="fslider testimonial twitter-scroll" data-animation="slide" data-arrows="false">
                             <div class="flexslider">
                                 <div class="slider-wrap">
                                 
-                                	  
+                                	<c:forEach var="item" items="${newsItems}">
                                     <div class="slide">
                                   
                                         <div class="testi-content text-center">                                        	
-                                            <p class="news-row">Moon has been Sighted!! Eid Mubarak! Eid is on Friday! </p>                                            
+                                            <p class="news-row">${item['news']}</p>                                            
                                         </div>
-                                    </div>           
+                                    </div>  
+                                    </c:forEach>         
                                      
                                      
-                                      
+                                     <!-- 
 		                            <div class="slide">
 		                            	<div class="divcenter" style="width: 740px;">
 			                                <a href="#">
 			                                    <img src="images/alhuda/idcard.jpg" alt="Slide 1" style="width: 740px;">		                                    
 			                                </a>
 		                                </div>
-		                            </div>  
+		                            </div>   -->
 		                            
 		                                                               
                                             
@@ -36,8 +38,9 @@
                             </div>
                         </div>
                     
-                    </div>     
-                     -->   				
+                    </div>    
+                    </c:if> 
+                     		
         			 
 					<div class="clear"></div>
 	      
@@ -415,6 +418,7 @@
 
             <div class="content-wrap">
 
+
                 <div class="container clearfix">
                             
                     <div class="fancy-title title-center title-dotted-border topmargin">
@@ -426,37 +430,18 @@
                         <div class="fslider testimonial twitter-scroll" data-animation="slide" data-arrows="false">
                             <div class="flexslider">
                                 <div class="slider-wrap">                                          
-                                                            
+ 	                    
+                                	<c:forEach var="item" items="${events}">
 		                            <div class="slide">
 		                            	<div class="divcenter" style="width: 1056px;">
 			                                <a href="#">
-			                                    <img src="images/alhuda/haj-seminar.jpg" alt="Slide 1" style="width: 1056px;">		                                    
+			                                    <img src="${item['link']}" alt="Slide 3" style="width: 1056px;">		                                    
 			                                </a>
 		                                </div>
-		                            </div>                                                                       
-		                            <div class="slide">
-		                            	<div class="divcenter" style="width: 1056px;">
-			                                <a href="#">
-			                                    <img src="images/alhuda/YOUTHSPADAYPINK.jpg" alt="Slide 2" style="width: 1056px;">		                                    
-			                                </a>
-		                                </div>
-		                            </div> 
-		                            <div class="slide">
-		                            	<div class="divcenter" style="width: 1056px;">
-			                                <a href="#">
-			                                    <img src="images/alhuda/youthopengym.jpg" alt="Slide 3" style="width: 1056px;">		                                    
-			                                </a>
-		                                </div>
-		                            </div>
-		                            <div class="slide">
-		                            	<div class="divcenter" style="width: 816px;">
-			                                <a href="#">
-			                                    <img src="images/alhuda/youthflyer2015.jpg" alt="Slide 4" style="width: 816px;">		                                    
-			                                </a>
-		                                </div>		                                		                                
 		                            </div>  
-		                            
-		                                                               
+                                    </c:forEach>  		                            
+		    
+		              	                            		                                                             
                                             
                                 </div>
                             </div>
@@ -469,7 +454,44 @@
                     <div class="clear"></div>                      
                 
 
-                </div>                          
+                </div>                
+                
+                <div class="container clearfix">
+                            
+                    <div class="fancy-title title-center title-dotted-border topmargin">
+                        <h3>Promotions and Offers</h3>
+                    </div>                            
+                                            
+                    <div class="col_full ">
+
+                        <div class="fslider testimonial twitter-scroll" data-animation="slide" data-arrows="false">
+                            <div class="flexslider">
+                                <div class="slider-wrap">                                          
+ 	                    
+                                	<c:forEach var="item" items="${adslist}">
+		                            <div class="slide">
+		                            	<div class="divcenter" style="width: 1056px;">
+			                                <a href="#">
+			                                    <img src="${item['link']}" alt="Slide 3" style="width: 1056px;">		                                    
+			                                </a>
+		                                </div>
+		                            </div>  
+                                    </c:forEach>  		                            
+		    
+		              	                            		                                                             
+                                            
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>        
+
+                                                                               
+                    
+                    <div class="clear"></div>                      
+                
+
+                </div>                    
         
                     
                     <!--  -->                                                

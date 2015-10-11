@@ -50,6 +50,10 @@
 		<put-attribute name="body" value="/WEB-INF/pdfFiles.jsp" />
 	</definition>	
 	
+	<definition name="downloadsTile" extends="baseTile">
+		<put-attribute name="body" value="/WEB-INF/downloads.jsp" />
+	</definition>		
+	
 	<definition name="contactTile" extends="baseTile">
 		<put-attribute name="body" value="/WEB-INF/contact.jsp" />
 	</definition>	

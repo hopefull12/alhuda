@@ -83,6 +83,49 @@ public class StaticPageController {
 		return mv;
 	}		
 	
+	@RequestMapping(value = "/prayertimes", method = RequestMethod.GET)
+	public ModelAndView prayersTimePage() throws IOException {
+		ModelAndView mv = new ModelAndView("pdfFilesTile");
+		//UploadedFilesBean bean = masjidService.getPDFFiles2();
+		//mv.addObject("ptPdfFiles", bean);
+		mv.addObject("ptlist", masjidService.getItems("PT_PDF"));
+		return mv;
+	}	
+	
+	@RequestMapping(value = "/downloads", method = RequestMethod.GET)
+	public ModelAndView downloadsPage() throws IOException {
+		ModelAndView mv = new ModelAndView("downloadsTile");
+		//UploadedFilesBean bean = masjidService.getPDFFiles2();
+		//mv.addObject("ptPdfFiles", bean);
+		mv.addObject("downloadlist", masjidService.getItems("DOWNLOADDOC"));
+		return mv;
+	}	
+	
+	@RequestMapping(value = "/downloadFile/{fileName}/", method = RequestMethod.GET)
+	public ResponseEntity<InputStreamResource> downloadFile(@PathVariable("fileName") String fileName)
+	                                                                  throws IOException {
+		ByteArrayResource is = masjidService.getFileByFileName2(fileName);
+		String fileExt = fileName.substring(fileName.indexOf("."), fileName.length());
+		String mimeTypeToUse = null;
+		System.out.println("The file ext is: "+fileExt);
+		
+		if(".pdf".equals(fileExt)){
+			mimeTypeToUse = "pdf";
+		}else if(".docx".equals(fileExt)){
+			mimeTypeToUse = "vnd.openxmlformats-officedocument.wordprocessingml.document";
+		}else if(".pptx".equals(fileExt)){
+			mimeTypeToUse = "vnd.ms-excel";
+		}
+		
+	    HttpHeaders respHeaders = new HttpHeaders();
+	    respHeaders.setContentType(MediaType.parseMediaType("application/"+mimeTypeToUse));
+	    respHeaders.setContentLength(is.contentLength());
+	    //respHeaders.setContentDispositionFormData("attachment", fileName+".pdf");
+	    
+	    InputStreamResource isr = new InputStreamResource(is.getInputStream());
+	    return new ResponseEntity<InputStreamResource>(isr, respHeaders, HttpStatus.OK);
+	}		
+	
 	@RequestMapping(value = "/ptPDFFiles/{fileName}/", method = RequestMethod.GET)
 	public ResponseEntity<InputStreamResource> downloadPDFFile(@PathVariable("fileName") String fileName)
 	                                                                  throws IOException {
