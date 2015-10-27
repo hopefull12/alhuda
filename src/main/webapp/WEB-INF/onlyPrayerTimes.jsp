@@ -30,12 +30,12 @@
                           <tbody>
                             <tr>
                               <td><h4><span class="subtitle subtitle-font"><strong>Begins</strong></span></h4></td>
-                              <td><h4><span class="subtitle">${dailySchedule.fajarBeginTime}</span></h4></td>
+                              <td><h4><span class="subtitle">${dailySchedule.fajarTime}</span></h4></td>
                               <td><h4><span class="subtitle">${dailySchedule.sunriseTime}</h4></td>
-                              <td><h4><span class="subtitle">${dailySchedule.dhuhrTIme}</h4></td>
+                              <td><h4><span class="subtitle">${dailySchedule.dhuhrTime}</h4></td>
                               <td><h4><span class="subtitle">${dailySchedule.asrTime}</h4></td>
-                              <td><h4><span class="subtitle">${dailySchedule.maghribTIme}</h4></td>
-                              <td><h4><span class="subtitle">${dailySchedule.ishaTIme}</h4></td>
+                              <td><h4><span class="subtitle">${dailySchedule.maghribTime}</h4></td>
+                              <td><h4><span class="subtitle">${dailySchedule.ishaTime}</h4></td>
                               <td><h4><span class="subtitle">${dailySchedule.jumah1Time}</h4></td>
                               <td><h4><span class="subtitle">${dailySchedule.jumah2Time}</h4></td>
                             </tr>
@@ -43,10 +43,10 @@
                               <td><h4><span class="subtitle subtitle-font"><strong>Iqama</strong></span></h4></td>
                               <td><h4><span class="subtitle">${dailySchedule.fajarIqamaTime}</span></h4></td>
                               <td><h4><span class="subtitle"></span></h4></td>
-                              <td><h4><span class="subtitle">${dailySchedule.dhuhrIqamaTIme}</span></h4></td>
-                              <td><h4><span class="subtitle">${dailySchedule.asrIqamaTIme}</span></h4></td>
-                              <td><h4><span class="subtitle">${dailySchedule.maghribIqamaTIme}</span></h4></td>
-                              <td><h4><span class="subtitle">${dailySchedule.ishaIqamaTIme}</span></h4></td>
+                              <td><h4><span class="subtitle">${dailySchedule.dhuhrIqamaTime}</span></h4></td>
+                              <td><h4><span class="subtitle">${dailySchedule.asrIqamaTime}</span></h4></td>
+                              <td><h4><span class="subtitle">${dailySchedule.maghribIqamaTime}</span></h4></td>
+                              <td><h4><span class="subtitle">${dailySchedule.ishaIqamaTime}</span></h4></td>
                               <td><h4><span class="subtitle">${dailySchedule.jumah1IqamaTime}</span></h4></td>
                               <td><h4><span class="subtitle">${dailySchedule.jumah2IqamaTime}</span></h4></td>
                             </tr>

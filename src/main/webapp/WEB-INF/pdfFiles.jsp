@@ -13,7 +13,7 @@
 							<h3>Prayer Time Files</h3>
 	                        <div class="list-group">	                        	                        
 	                        	<c:forEach var="item" items="${ptlist}">
-									<a class="list-group-item" target="_blank" href="${item['link']}">${item['name']}</a>
+									<a class="list-group-item" target="_blank" href="downloadFile/${item['fileName']}/">${item['name']}</a>
 	                            </c:forEach>                          
 	                        </div>							
 								

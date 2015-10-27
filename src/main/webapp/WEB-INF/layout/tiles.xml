@@ -25,7 +25,7 @@
 	</definition>	
 	
 	<definition name="homeTile" extends="baseTile">
-		<put-attribute name="body" value="/WEB-INF/home.jsp" />
+		<put-attribute name="body" value="/WEB-INF/home1.jsp" />
 	</definition>	
 	
 	<definition name="onlyPrayerTimesTile" extends="baseTile">

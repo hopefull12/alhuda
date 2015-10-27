@@ -22,31 +22,22 @@
 
                         <ul>
                             <li class="current"><a href="home.html"><div>Home</div></a>
-                            </li>
-                            <li><a href="#"><div>About Us</div></a>
-                                <ul>
-                                    <li><a href="board.html"><div>Board of Trustees</div></a>
-
-                                    </li>
-                                    <li><a href="masjidExpansionProject.html"><div>Masjid Expansion</div></a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><a href="#"><div>Media</div></a>
+                            </li>                          
+                            <li><a href="prayertimes.html"><div>Prayer Times</div></a>
+                            </li>                       
+                            </li> 
+                            <li><a href="underconstruction.html"><div>Events</div></a>
+                            </li>       
+                            <li><a href="#"><div>Content</div></a>
                                 <ul>
                                     <li><a href="underconstruction.html"><div>Audio Library</div></a>
 
                                     </li>
                                     <li><a href="underconstruction.html"><div>Video Library</div></a>
                                     </li>
+                                    <li><a href="downloads.html"><div>Downloads</div></a>
                                 </ul>
-                            </li>                            
-                            <li><a href="prayertimes.html"><div>Prayer Times</div></a>
-                            </li>      
-                            <li><a href="donate.html"><div>Donations</div></a>
-                            </li> 
-                            <li><a href="underconstruction.html"><div>Events</div></a>
-                            </li>       
+                            </li>                              
                             <li><a href="#"><div>Schools</div></a>
                                 <ul>
                                     <li><a href="http://sites.alhudaacademy.com/alhudamain/"><div>Full Time School</div></a>
@@ -57,10 +48,19 @@
                                     <li><a href="underconstruction.html"><div>Hifz &amp; Nazira School</div></a>
                                     </li>                                    
                                 </ul>
-                            </li>
-                            <li><a href="downloads.html"><div>Downloads</div></a>
-                            <li><a href="underconstruction.html"><div>Contact Us</div></a>
                             </li>                            
+                            <li><a href="#"><div>About Us</div></a>
+                                <ul>
+                                    <li><a href="board.html"><div>Board of Trustees</div></a>
+
+                                    </li>
+                                    <li><a href="masjidExpansionProject.html"><div>Masjid Expansion</div></a>
+                                    </li>
+		                            <li><a href="underconstruction.html"><div>Contact Us</div></a>
+		                            </li>                                     
+                                </ul>
+                            </li>                            
+                           
                         </ul>
 
                     </nav><!-- #primary-menu end -->

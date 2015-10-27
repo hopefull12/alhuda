@@ -1,0 +1,169 @@
+(function () {
+	
+    window.masjidData = {
+            ptplugin : {}
+        };
+
+    var pp = window.masjidData.ptplugin;
+    pp.logging = arguments[1];
+    pp.previousPrayer = "";
+    pp.nextPrayer = "";	
+    //This represents the pt data for one or whole month
+    pp.ptCache = ""
+    //the current data that is being shown in the grid display
+    pp.gridData = "";
+    pp.gridDate = null;
+    
+    pp.gridHeader = ["header","fajar","sunrise","dhuhr","asr","maghrib","isha","jumah1","jumah2"];
+    
+    var clientOffset = -5;
+    var dataRefreshFrequency = arguments[0];    
+	
+	var now, nowWithoutTimeStr, dayOfTheWeek, today, tomorrow, tomorrowWithoutTimeStr;
+	function init(){
+        
+        //initialize cache
+        pp.ptCache = JSON.parse($("#prayerTimesData").val());
+        
+        //initialize today and tomorrow date variables
+        now = clientDate(new Date(), clientOffset);               
+        nowWithoutTimeStr = (now.getMonth() + 1)+"/"+now.getDate()+"/"+now.getFullYear();        
+        today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+        tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate()+1);
+        tomorrowWithoutTimeStr = (tomorrow.getMonth() + 1)+"/"+tomorrow.getDate()+"/"+tomorrow.getFullYear();
+
+        //get today's and tomorrow's grid data from cache
+        var todayData, tomorrowData;
+        for(var i=0; i<pp.ptCache.length; i++){
+        	if(nowWithoutTimeStr === pp.ptCache[i].date){
+        		todayData = pp.ptCache[i];
+        	} else if(tomorrowWithoutTimeStr === pp.ptCache[i].date){
+        		tomorrowData = pp.ptCache[i];
+        	}
+        }
+        
+        //get isha prayers date and add buffer time to it
+        var ishaDate = new Date(nowWithoutTimeStr + " " + todayData["ishaIqamaTime"]);
+        var startTime = new Date(ishaDate.getTime() + (todayData["ishaBufferTime"] * 60 * 1000));
+
+        //if ISHA prayer is done then gridDate is nextday if not then it is the current day
+        if(now.getTime() < startTime.getTime()){	
+        	pp.gridDate = now;
+        	pp.gridDateWithoutTimeStr = nowWithoutTimeStr;
+        	pp.gridData = todayData;
+        } else {
+        	pp.gridDate = tomorrow;
+        	pp.gridDateWithoutTimeStr = (tomorrow.getMonth() + 1)+"/"+tomorrow.getDate()+"/"+tomorrow.getFullYear();
+        	pp.gridData = tomorrowData;
+        }		        		
+        log("The grid date is: "+pp.gridDate);
+        
+        //basing on the grid date initialize the variables
+        //initialize prayerlist
+        if(pp.gridDate.getDay() === 5){
+            pp.prayerList = ["fajar","jumah1","jumah2", "asr","maghrib","isha"];            
+        } else {
+            pp.prayerList = ["fajar","dhuhr", "asr","maghrib","isha"];
+        }
+        log("Done building prayer list");        
+	}
+	
+	function moveSlider(){
+		
+		if(pp.previousPrayer === "isha"){
+			window.location.reload();
+		}
+		
+		findNextPrayer();		
+		//testNextPrayer();
+		
+		var ptindex = pp.gridHeader.indexOf(pp.nextPrayer);
+
+        $( "#prayertimegrid1 tr" ).each(function(index, element){
+        	var tds = $(this).children();
+        	tds.removeClass("nextprayer");
+        	$(tds[ptindex]).addClass("nextprayer");
+        })
+        
+        $( "#prayertimegrid2 tr" ).children().removeClass("nextprayer")
+        $( "#prayertimegrid2 tr:eq("+ptindex+")" ).children().addClass("nextprayer")
+        
+        var counterDate = new Date(pp.nextPrayerIqamaDate.getFullYear(), pp.nextPrayerIqamaDate.getMonth(), pp.nextPrayerIqamaDate.getDate());
+        $('#countdown-ex3').countdown({until: pp.nextPrayerIqamaDate});
+        
+        setTimeout(moveSlider, 5000);        
+	}
+	
+	function testNextPrayer(){
+		pp.previousPrayer = pp.nextPrayer;
+		if(pp.nextPrayer == "isha") {
+			window.location.reload();
+			return;
+		}
+		var index = pp.prayerList.indexOf(pp.nextPrayer)+1;
+		pp.nextPrayer = pp.prayerList[index];
+		log("The next prayer is: "+pp.nextPrayer);
+	}
+	
+	
+	function findNextPrayer(){
+
+        for(var i=0; i < pp.prayerList.length; i++){
+        	var prayerNameProp = pp.prayerList[i]+"IqamaTime";
+            var pDate = new Date(nowWithoutTimeStr + " " + pp.gridData[prayerNameProp]);
+            var bufferProp = pp.gridData[pp.prayerList[i]+"BufferTime"];
+            var startTime = new Date(pDate.getTime() + (bufferProp * 60 * 1000));
+
+            if(now.getTime() < startTime.getTime()){
+            	pp.nextPrayerIqamaDate=pDate;
+                pp.previousPrayer = pp.nextPrayer;
+                pp.nextPrayer = pp.prayerList[i];                        
+                pp.nextRunTimeInMilliSec = startTime.getTime() - now.getTime();
+                break;
+            }
+
+        }
+        
+        if(pp.nextPrayer === "" || pp.nextPrayer === null || pp.nextPrayer === undefined){
+        	window.location.reload();
+        }
+        
+        log("The next prayer is: "+pp.nextPrayer);    
+		
+	}
+	
+    var run = function(){
+        init();
+        moveSlider();
+    }	
+	
+    function Slider(){
+        run();
+    }
+    
+    pp.slider = Slider;	
+	
+	// ==========================Helper functions===========================
+	
+    //Utility function Converts any date to a date basing on client timezone
+    function clientDate(date, offset) {
+
+        // create Date object for current location
+        //d = new Date(dateStr);
+
+        // convert to msec, add local time zone offset, get UTC time in msec
+        var utc = date.getTime() + (date.getTimezoneOffset() * 60 * 1000);
+
+        // create new Date object for different city, using supplied offset
+        nd = new Date(utc + (3600000*offset));
+        return nd;
+    }	
+    
+    function log(msg){
+        if(pp.logging) {
+            console.log(msg);
+        }
+    }    
+	
+	
+}("DAILY",true))

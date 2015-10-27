@@ -1,5 +1,9 @@
 package com.es.masjid.alhuda.controller;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -32,12 +36,19 @@ public class HomeController {
 		ModelAndView mv = new ModelAndView("homeTile");
 		
 		DailyScheduleBean bean = masjidService.getTodaySchedule();
-		mv.addObject("dailySchedule", bean);
+		
+        SimpleDateFormat sdf = new SimpleDateFormat("M/d/yyyy");
+        Date today = new Date();
+       // Date todayWithZeroTime =sdf.parse(sdf.format(today));
+        mv.addObject("dailySchedule", bean);
+		mv.addObject("prayerTimesData", masjidService.getPrayerTimesAsString(sdf.format(today), sdf.format(today)));
 		mv.addObject("newsItems", masjidService.getItems("NEWS"));
 		mv.addObject("events", masjidService.getItems("EVENT"));
 		mv.addObject("adslist", masjidService.getItems("ADS"));
 		
 		return mv;
 	}	
+	
+	
 
 }

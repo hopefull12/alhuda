@@ -92,6 +92,8 @@
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.calendario.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/events-data.js"></script>	    
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/functions.js"></script>
+    
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/alhuda/slider2.js"></script>
 
 </body>
 </html>

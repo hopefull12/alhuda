@@ -30,6 +30,8 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import com.es.masjid.alhuda.model.DailyScheduleBean;
 import com.es.masjid.shared.UploadedFilesBean;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 @PropertySource("classpath:application.properties")
 @Component
@@ -47,6 +49,7 @@ public class MasjidService {
 	private static String REST_NEWS_ITEMS_URL = "rest.madmin.newsitems";
 	
 	private static String REST_NEWS_URL = "rest.madmin.news";
+	private static String REST_PRAYERTIMES_URL = "rest.madmin.pt";
 	private Logger logger = LoggerFactory.getLogger(MasjidService.class);
 	
 	public DailyScheduleBean getTodaySchedule(){
@@ -56,11 +59,35 @@ public class MasjidService {
 		
 		logger.info("Daily  schedule URL: "+dailScheduleURL);
 		
-		DailyScheduleBean bean = restTemplate.getForObject(dailScheduleURL, DailyScheduleBean.class);
+		DailyScheduleBean bean = (DailyScheduleBean)restTemplate.getForObject(dailScheduleURL, DailyScheduleBean.class);
 		
 		return bean;		
 		
 	}
+	
+//	public List<Map<String, String>> getTodaySchedule2(){
+//		RestTemplate restTemplate = new RestTemplate();
+//		String pdfFilesURL = env.getRequiredProperty(REST_DAILY_SCHEDULE_URL);
+//		
+//		HttpHeaders headers = new HttpHeaders();
+//		headers.set("Accept", MediaType.APPLICATION_JSON_VALUE);
+//		HttpEntity<?> entity = new HttpEntity<>(headers);
+//		
+//		UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(pdfFilesURL);
+//		        //.queryParam("itemType", itemType);		
+//		
+//		ParameterizedTypeReference<List<Map<String, String>>> typeRef = new ParameterizedTypeReference<List<Map<String, String>>>() {};
+//		
+//		ResponseEntity<List<Map<String, String>>> response = restTemplate.exchange(builder.build().encode().toUri(), HttpMethod.GET, entity, typeRef);
+//		
+//		List<Map<String, String>> items = response.getBody();
+//		
+//		if(items != null){
+//			logger.info("Number of items of type "+itemType+" retrieved: "+items.size());
+//		}
+//		
+//		return response.getBody();
+//	}	
 	
 	public List<String> getPDFFiles() throws IOException{
 		RestTemplate restTemplate = new RestTemplate();
@@ -148,6 +175,51 @@ public class MasjidService {
 		ParameterizedTypeReference<List<Map<String, String>>> typeRef = new ParameterizedTypeReference<List<Map<String, String>>>() {};
 		
 		ResponseEntity<List<Map<String, String>>> response = restTemplate.exchange(builder.build().encode().toUri(), HttpMethod.GET, entity, typeRef);
+		
+		List<Map<String, String>> items = response.getBody();
+		
+		if(items != null){
+			logger.info("Number of items of type "+itemType+" retrieved: "+items.size());
+		}
+		
+		return response.getBody();
+	}	
+	
+	public String getPrayerTimesAsString(String fromDate, String toDate){
+		
+		List<Map<String, String>> map = getPrayerTimes(fromDate, toDate);
+		ObjectMapper mapper = new ObjectMapper();
+		String result = "";
+		try {
+			result = mapper.writeValueAsString(map);
+		} catch (JsonProcessingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		logger.debug("Prayer Times: "+result);
+		return result;
+	}
+	
+	public List<Map<String, String>> getPrayerTimes(String fromDate, String toDate){
+		RestTemplate restTemplate = new RestTemplate();
+		String ptURL = env.getRequiredProperty(REST_PRAYERTIMES_URL);
+		
+		HttpHeaders headers = new HttpHeaders();
+		headers.set("Accept", MediaType.APPLICATION_JSON_VALUE);
+		HttpEntity<?> entity = new HttpEntity<>(headers);
+		
+		UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(ptURL)
+		        .queryParam("fromDate", fromDate).queryParam("toDate", toDate);		
+		
+		ParameterizedTypeReference<List<Map<String, String>>> typeRef = new ParameterizedTypeReference<List<Map<String, String>>>() {};
+		
+		ResponseEntity<List<Map<String, String>>> response = restTemplate.exchange(builder.build().encode().toUri(), HttpMethod.GET, entity, typeRef);
+		
+		List<Map<String, String>> items = response.getBody();
+		
+//		if(items != null){
+//			logger.info("Number of items of type "+itemType+" retrieved: "+items.size());
+//		}
 		
 		return response.getBody();
 	}	
