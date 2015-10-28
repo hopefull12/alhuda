@@ -35,13 +35,14 @@ public class HomeController {
 		
 		ModelAndView mv = new ModelAndView("homeTile");
 		
-		DailyScheduleBean bean = masjidService.getTodaySchedule();
+		Map<String, String> bean = masjidService.getTodaySchedule2();
 		
-        SimpleDateFormat sdf = new SimpleDateFormat("M/d/yyyy");
-        Date today = new Date();
-       // Date todayWithZeroTime =sdf.parse(sdf.format(today));
+        //SimpleDateFormat sdf = new SimpleDateFormat("M/d/yyyy");
+        //Date today = new Date();
+
+        //change jsp to use map and remove dependency on DailyScheduleBean
         mv.addObject("dailySchedule", bean);
-		mv.addObject("prayerTimesData", masjidService.getPrayerTimesAsString(sdf.format(today), sdf.format(today)));
+		mv.addObject("prayerTimesData", masjidService.getPrayerTimesAsString());
 		mv.addObject("newsItems", masjidService.getItems("NEWS"));
 		mv.addObject("events", masjidService.getItems("EVENT"));
 		mv.addObject("adslist", masjidService.getItems("ADS"));
