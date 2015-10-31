@@ -8,6 +8,8 @@
     pp.logging = arguments[1];
     pp.previousPrayer = "";
     pp.nextPrayer = "";	
+    
+    pp.nextRunTimeInMilliSec=60000;
     //This represents the pt data for one or whole month
     pp.ptCache = ""
     //the current data that is being shown in the grid display
@@ -42,9 +44,17 @@
         	}
         }
         
-        //get isha prayers date and add buffer time to it
-        var ishaDate = new Date(nowWithoutTimeStr + " " + todayData["ishaIqamaTime"]);
-        var startTime = new Date(ishaDate.getTime() + (todayData["ishaBufferTime"] * 60 * 1000));
+        var ishaDate=null;
+        
+        //This var needs to be initialized in case todayDate is not found.
+        var startTime=new Date(nowWithoutTimeStr);
+        
+        //This condition can happen for DAILY schedule since only one days data is available.
+        if(todayData !== undefined){
+        	//get isha prayers date and add buffer time to it
+        	ishaDate = new Date(nowWithoutTimeStr + " " + todayData["ishaIqamaTime"]);
+        	startTime = new Date(ishaDate.getTime() + (todayData["ishaBufferTime"] * 60 * 1000));
+        }
 
         //if ISHA prayer is done then gridDate is nextday if not then it is the current day
         if(now.getTime() < startTime.getTime()){	
@@ -88,8 +98,8 @@
         $( "#prayertimegrid2 tr" ).children().removeClass("nextprayer")
         $( "#prayertimegrid2 tr:eq("+ptindex+")" ).children().addClass("nextprayer")
         
-        var counterDate = new Date(pp.nextPrayerIqamaDate.getFullYear(), pp.nextPrayerIqamaDate.getMonth(), pp.nextPrayerIqamaDate.getDate());
-        $('#countdown-ex3').countdown({until: pp.nextPrayerIqamaDate});
+        //var counterDate = new Date(pp.nextPrayerIqamaDate.getFullYear(), pp.nextPrayerIqamaDate.getMonth(), pp.nextPrayerIqamaDate.getDate());
+        //$('#countdown-ex3').countdown({until: pp.nextPrayerIqamaDate});
         
         setTimeout(moveSlider, pp.nextRunTimeInMilliSec);        
 	}
@@ -110,7 +120,7 @@
 		now = clientDate(new Date(), clientOffset);
         for(var i=0; i < pp.prayerList.length; i++){
         	var prayerNameProp = pp.prayerList[i]+"IqamaTime";
-            var pDate = new Date(nowWithoutTimeStr + " " + pp.gridData[prayerNameProp]);
+            var pDate = new Date(pp.gridDateWithoutTimeStr + " " + pp.gridData[prayerNameProp]);
             var bufferProp = pp.gridData[pp.prayerList[i]+"BufferTime"];
             var startTime = new Date(pDate.getTime() + (bufferProp * 60 * 1000));
 

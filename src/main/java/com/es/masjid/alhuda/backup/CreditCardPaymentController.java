@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.client.RestTemplate;
 
-import com.es.masjid.alhuda.model.DailyScheduleBean;
+import com.es.masjid.deleted.DailyScheduleBean;
 import com.paypal.api.payments.Amount;
 import com.paypal.api.payments.CreditCard;
 import com.paypal.api.payments.FundingInstrument;

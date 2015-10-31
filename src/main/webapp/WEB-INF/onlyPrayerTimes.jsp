@@ -64,6 +64,7 @@
                                          
                           </tbody>
                         </table>                                               	
+                        <input id="prayerTimesData" type="hidden" value='${prayerTimesData}'>
                         
                         <!-- 
         				<div class="col_full text-right">
@@ -79,107 +80,11 @@
         				 -->                   	
                         
 						<script type="text/javascript">
-						
-						function setPrayerTimes(){
-							
-							//Central time offset in hours
-							var offset = 5;
-						    // create Date object for current location						    
-						    var now = new Date();
-							//get offset relative to the UTC/GMT time
-						    var localOffset = now.getTimezoneOffset() * 60000;
-							//Convert current time to UTC time by adding the offset
-						    var utc = now.getTime() + localOffset;
-	
-						    // create new Date object for different city using supplied offset						    
-						    var currentCST = new Date(utc - (3600000*offset));
-						    
-						    var cstHour = currentCST.getHours();
-						    var cstMinute = currentCST.getMinutes();
-						    
-						    //the current prayer will remain highlighted for sometime even though the prayer has started
-						    var delayRefresh =  30 * 60 * 1000;
-						    
-						    var prayerTimes = [];
-						    
-						    now.setHours(0,0,0,0);
-						    var year = now.getFullYear(), month = now.getMonth(), day = now.getDate();
-						    var strNow = (month+1) + "/" + day + "/" + year;
-						    var nextPrayerIndex = 0;
-						    var nextPrayerTime, nextPrayerIsIn;
-						    $('#prayertimegrid1 tr:eq(2) td').each(function(index, element){						    							    	
-						    	var text = $(this).find('span').text();
-						    	if(!(index == 0 || index == 2 || (currentCST.getDay() == 5 && index == 3) || (currentCST.getDay() != 5 && (index == 7 || index == 8)) )){
-						    		var pd = new Date(strNow + " " + text);
-						    		prayerTimes[prayerTimes.length] = pd;
-						    	}
-						    });
-						    
-						    prayerTimes.sort();
-						    
-						    $(prayerTimes).each(function(index, element){										    		
-					    		if(this.getTime() > currentCST.getTime()){
-					    			nextPrayerIndex = index;
-					    			nextPrayerTime = this.getTime();
-					    			nextPrayerIsIn = this.getTime() - currentCST.getTime();
-					    			return false;
-					    		}						    	
-						    });
-						    
-						    //two columns were excluded earlier, so adding +2
-						    var tableIndex = 0;
-						    var secondTableIndex = 0;
-						    
-						    if(nextPrayerIndex == 0){
-						    	tableIndex = nextPrayerIndex + 1;
-						    	secondTableIndex = nextPrayerIndex + 1;
-						    } else {
-						    	tableIndex = nextPrayerIndex + 2;
-						    	tableIndex = nextPrayerIndex + 2;
-						    	secondTableIndex = nextPrayerIndex + 2;
-						    }
-						    
-						    if(currentCST.getDay() == 5){
-						    	
-						    	if(nextPrayerIndex == 1 || nextPrayerIndex == 2){
-						    		tableIndex = nextPrayerIndex + 6;
-						    		secondTableIndex = nextPrayerIndex + 6;
-						    	} 
-						    }						    						    
-						    
-						    //remove current high lighted prayer in table 1
-						    $('#prayertimegrid1 tr th').removeClass("nextprayer");
-						    $('#prayertimegrid1 tr td').removeClass("nextprayer");
-						    						    
-						    //apply css to the next prayer in table 1
-						    $('#prayertimegrid1 tr:eq(0) th:eq('+tableIndex+")").addClass("nextprayer");
-						    $('#prayertimegrid1 tr:eq(1) td:eq('+tableIndex+")").addClass("nextprayer");
-						    $('#prayertimegrid1 tr:eq(2) td:eq('+tableIndex+")").addClass("nextprayer");	
-						    
-						    //remove current high lighted prayer in table 2
-						    $('#prayertimegrid2 tr th').removeClass("nextprayer");
-						    $('#prayertimegrid2 tr td').removeClass("nextprayer");	
-						    
-						    //$('#prayertimegrid2 tr:eq(0) th').addClass("nextprayer");
-						    
-						    //apply css to the next prayer in table 2
-						    $('#prayertimegrid2 tr:eq('+secondTableIndex+") th").addClass("nextprayer");
-						    $('#prayertimegrid2 tr:eq('+secondTableIndex+") td").addClass("nextprayer");					
-						    
-                            var newDate = new Date(nextPrayerTime);
-                            $('#countdown-ex3').countdown({until: newDate});
-                            $('#countdown-ex2').countdown({until: newDate});
-                            
-                            nextPrayerIsIn = nextPrayerIsIn + delayRefresh;
-						    						    						    
-						    return nextPrayerIsIn;
-							
-						}
+
 						
 						$(document).ready(function(){														
 							
-							var nextPrayerInTime = setPrayerTimes();
-							setTimeout(function(){setPrayerTimes()},nextPrayerInTime);
+							 window.masjidData.ptplugin.slider();
 							
 							 $(window).resize(function(){
 	

@@ -19,9 +19,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.es.masjid.alhuda.model.DailyScheduleBean;
 import com.es.masjid.alhuda.service.MasjidService;
-import com.es.masjid.shared.UploadedFilesBean;
+import com.es.masjid.deleted.DailyScheduleBean;
+import com.es.masjid.deleted.UploadedFilesBean;
 
 @Controller
 public class StaticPageController {
@@ -67,14 +67,14 @@ public class StaticPageController {
 		return new ModelAndView("sundayschoolTile");
 	}	
 	
-	@RequestMapping(value = "/ptPDFFiles", method = RequestMethod.GET)
-	public ModelAndView displayPDFFiles()
-	                                                                  throws IOException {
-		ModelAndView mv = new ModelAndView("prayerTimePdfFilesTile");
-		List<String> fileNames = masjidService.getPDFFiles();
-		mv.addObject("ptPdfFiles", fileNames);
-		return mv;
-	}	
+//	@RequestMapping(value = "/ptPDFFiles", method = RequestMethod.GET)
+//	public ModelAndView displayPDFFiles()
+//	                                                                  throws IOException {
+//		ModelAndView mv = new ModelAndView("prayerTimePdfFilesTile");
+//		List<String> fileNames = masjidService.getPDFFiles();
+//		mv.addObject("ptPdfFiles", fileNames);
+//		return mv;
+//	}	
 	
 	@RequestMapping(value = "/ptPDFFiles2", method = RequestMethod.GET)
 	public ModelAndView displayPDFFiles2()
@@ -128,30 +128,30 @@ public class StaticPageController {
 	    return new ResponseEntity<InputStreamResource>(isr, respHeaders, HttpStatus.OK);
 	}		
 	
-	@RequestMapping(value = "/ptPDFFiles/{fileName}/", method = RequestMethod.GET)
-	public ResponseEntity<InputStreamResource> downloadPDFFile(@PathVariable("fileName") String fileName)
-	                                                                  throws IOException {
-		ByteArrayResource is = masjidService.getFileByFileName(fileName);
-		String fileExt = fileName.substring(fileName.indexOf("."), fileName.length());
-		String mimeTypeToUse = null;
-		System.out.println("The file ext is: "+fileExt);
-		
-		if(".pdf".equals(fileExt)){
-			mimeTypeToUse = "pdf";
-		}else if(".docx".equals(fileExt)){
-			mimeTypeToUse = "vnd.openxmlformats-officedocument.wordprocessingml.document";
-		}else if(".pptx".equals(fileExt)){
-			mimeTypeToUse = "vnd.ms-excel";
-		}
-		
-	    HttpHeaders respHeaders = new HttpHeaders();
-	    respHeaders.setContentType(MediaType.parseMediaType("application/"+mimeTypeToUse));
-	    respHeaders.setContentLength(is.contentLength());
-	    //respHeaders.setContentDispositionFormData("attachment", fileName+".pdf");
-	    
-	    InputStreamResource isr = new InputStreamResource(is.getInputStream());
-	    return new ResponseEntity<InputStreamResource>(isr, respHeaders, HttpStatus.OK);
-	}	
+//	@RequestMapping(value = "/ptPDFFiles/{fileName}/", method = RequestMethod.GET)
+//	public ResponseEntity<InputStreamResource> downloadPDFFile(@PathVariable("fileName") String fileName)
+//	                                                                  throws IOException {
+//		ByteArrayResource is = masjidService.getFileByFileName(fileName);
+//		String fileExt = fileName.substring(fileName.indexOf("."), fileName.length());
+//		String mimeTypeToUse = null;
+//		System.out.println("The file ext is: "+fileExt);
+//		
+//		if(".pdf".equals(fileExt)){
+//			mimeTypeToUse = "pdf";
+//		}else if(".docx".equals(fileExt)){
+//			mimeTypeToUse = "vnd.openxmlformats-officedocument.wordprocessingml.document";
+//		}else if(".pptx".equals(fileExt)){
+//			mimeTypeToUse = "vnd.ms-excel";
+//		}
+//		
+//	    HttpHeaders respHeaders = new HttpHeaders();
+//	    respHeaders.setContentType(MediaType.parseMediaType("application/"+mimeTypeToUse));
+//	    respHeaders.setContentLength(is.contentLength());
+//	    //respHeaders.setContentDispositionFormData("attachment", fileName+".pdf");
+//	    
+//	    InputStreamResource isr = new InputStreamResource(is.getInputStream());
+//	    return new ResponseEntity<InputStreamResource>(isr, respHeaders, HttpStatus.OK);
+//	}	
 	
 
 	
