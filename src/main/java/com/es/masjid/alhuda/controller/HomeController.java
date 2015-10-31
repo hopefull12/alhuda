@@ -42,7 +42,7 @@ public class HomeController {
 
         //change jsp to use map and remove dependency on DailyScheduleBean
         mv.addObject("dailySchedule", bean);
-		mv.addObject("prayerTimesData", masjidService.getPrayerTimesAsString());
+		mv.addObject("prayerTimesData", masjidService.getPrayerTimesAsString("DAILY"));
 		mv.addObject("newsItems", masjidService.getItems("NEWS"));
 		mv.addObject("events", masjidService.getItems("EVENT"));
 		mv.addObject("adslist", masjidService.getItems("ADS"));

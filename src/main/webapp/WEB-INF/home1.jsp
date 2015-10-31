@@ -84,12 +84,13 @@
                               <td><h4><span class="subtitle">${dailySchedule.jumah2IqamaTime}</span></h4></td>
                             </tr>
                             
+                            <!-- 
                             <tr>
-                            	<td colspan="6">Next Prayer:</td>
+                            	<td colspan="6"><span style="text-right">Next Prayer:</span></td>
                             	<td colspan="3"><div id="countdown-ex3" class="countdown"></div></td>
                             </tr>                            
                             
-                            <!-- 
+                            
                             <tr>
                             	<td colspan="3"></td>
                             	<td colspan="2" class="prayer-counter-title"><h4><span class="subtitle subtitle-font"><strong>Next prayer is in:</strong></span></h4> </td>
@@ -156,7 +157,7 @@
                             </tbody>                         
                         </table>          	
                         <input id="prayerTimesData" type="hidden" value='${prayerTimesData}'>
-                        
+                        <!-- 
         				<div class="col_full text-right">
         					<div class="col_two_third">
         						Next prayer:
@@ -166,7 +167,7 @@
                         	</div>       				
         		
         				</div>     
-        				
+        				 -->
         				                   	
                         
 						<script type="text/javascript">

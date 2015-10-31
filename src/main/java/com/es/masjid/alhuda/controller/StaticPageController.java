@@ -40,8 +40,9 @@ public class StaticPageController {
 		
 		ModelAndView mv = new ModelAndView("onlyPrayerTimesTile");
 		
-		DailyScheduleBean bean = masjidService.getTodaySchedule();
+		Map<String, String> bean = masjidService.getTodaySchedule2();
 		mv.addObject("dailySchedule", bean);		
+		mv.addObject("prayerTimesData", masjidService.getPrayerTimesAsString("MONTHLY"));
 		
 		return mv;
 	}	

@@ -43,30 +43,32 @@ public class MasjidService {
     private MailSender mailSender;
     private SimpleMailMessage templateMessage;	
 	
-	private static String REST_DAILY_SCHEDULE_URL = "rest.madmin.dailyschedule";
+	
 	private static String REST_PRAYERTIME_PDF_URL = "rest.madmin.ptPdfFiles";
 	private static String REST_DOWNLOAD_FILE_URL = "rest.madmin.downloadfile";
-	private static String REST_NEWS_ITEMS_URL = "rest.madmin.newsitems";
+	//private static String REST_NEWS_ITEMS_URL = "rest.madmin.newsitems";
 	
 	private static String REST_NEWS_URL = "rest.madmin.news";
-	private static String REST_PRAYERTIMES_URL = "rest.madmin.pt";
+	
+	private static String REST_DAILY_SCHEDULE_URL = "rest.madmin.pt.daily";
+	private static String REST_MONTHLY_SCHEDULE_URL = "rest.madmin.pt.monthly";
 	private Logger logger = LoggerFactory.getLogger(MasjidService.class);
 	
-	public DailyScheduleBean getTodaySchedule(){
-		
-		RestTemplate restTemplate = new RestTemplate();
-		String dailScheduleURL = env.getRequiredProperty(REST_DAILY_SCHEDULE_URL);
-		
-		logger.info("Daily  schedule URL: "+dailScheduleURL);
-		
-		DailyScheduleBean bean = (DailyScheduleBean)restTemplate.getForObject(dailScheduleURL, DailyScheduleBean.class);
-		
-		return bean;		
-		
-	}
+//	public DailyScheduleBean getTodaySchedule(){
+//		
+//		RestTemplate restTemplate = new RestTemplate();
+//		String dailScheduleURL = env.getRequiredProperty(REST_DAILY_SCHEDULE_URL);
+//		
+//		logger.info("Daily  schedule URL: "+dailScheduleURL);
+//		
+//		DailyScheduleBean bean = (DailyScheduleBean)restTemplate.getForObject(dailScheduleURL, DailyScheduleBean.class);
+//		
+//		return bean;		
+//		
+//	}
 	
 	public Map<String, String> getTodaySchedule2(){
-		List<Map<String, String>> pt = getPrayerTimes();	
+		List<Map<String, String>> pt = getPrayerTimes(REST_DAILY_SCHEDULE_URL);	
 		Map<String, String> map = pt.get(0);	
 		return map;	
 	}	
@@ -191,9 +193,15 @@ public class MasjidService {
 		return response.getBody();
 	}	
 	
-	public String getPrayerTimesAsString(){
+	public String getPrayerTimesAsString(String cacheType){
+		String url = null;
+		if("DAILY".endsWith(cacheType)){
+			url = REST_DAILY_SCHEDULE_URL;
+		} else {
+			url = REST_MONTHLY_SCHEDULE_URL;
+		}
 		
-		List<Map<String, String>> map = getPrayerTimes();
+		List<Map<String, String>> map = getPrayerTimes(url);
 		ObjectMapper mapper = new ObjectMapper();
 		String result = "";
 		try {
@@ -206,9 +214,9 @@ public class MasjidService {
 		return result;
 	}	
 	
-	private List<Map<String, String>> getPrayerTimes(){
+	private List<Map<String, String>> getPrayerTimes(String url){
 		RestTemplate restTemplate = new RestTemplate();
-		String ptURL = env.getRequiredProperty(REST_PRAYERTIMES_URL);
+		String ptURL = env.getRequiredProperty(url);
 		
 		HttpHeaders headers = new HttpHeaders();
 		headers.set("Accept", MediaType.APPLICATION_JSON_VALUE);

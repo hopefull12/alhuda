@@ -91,7 +91,7 @@
         var counterDate = new Date(pp.nextPrayerIqamaDate.getFullYear(), pp.nextPrayerIqamaDate.getMonth(), pp.nextPrayerIqamaDate.getDate());
         $('#countdown-ex3').countdown({until: pp.nextPrayerIqamaDate});
         
-        setTimeout(moveSlider, 5000);        
+        setTimeout(moveSlider, pp.nextRunTimeInMilliSec);        
 	}
 	
 	function testNextPrayer(){
@@ -107,7 +107,7 @@
 	
 	
 	function findNextPrayer(){
-
+		now = clientDate(new Date(), clientOffset);
         for(var i=0; i < pp.prayerList.length; i++){
         	var prayerNameProp = pp.prayerList[i]+"IqamaTime";
             var pDate = new Date(nowWithoutTimeStr + " " + pp.gridData[prayerNameProp]);

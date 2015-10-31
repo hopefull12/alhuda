@@ -149,11 +149,11 @@
                             </tr>     
                             </tbody>                         
                         </table>          	
-                        
+                        <input id="prayerTimesData" type="hidden" value='${prayerTimesData}'>
                         <!-- 
         				<div class="col_full text-right">
         					<div class="col_half">
-        						Next prayer: 
+        						Next prayer111: 
         					</div>
         					<div class="col_half col_last divleft">
                         		<div id="countdown-ex3" class="countdown"></div>
