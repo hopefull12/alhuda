@@ -18,17 +18,19 @@
     
     pp.gridHeader = ["header","fajar","sunrise","dhuhr","asr","maghrib","isha","jumah1","jumah2"];
     
-    var clientOffset = -5;
     var dataRefreshFrequency = arguments[0];    
 	
-	var now, nowWithoutTimeStr, dayOfTheWeek, today, tomorrow, tomorrowWithoutTimeStr;
+	var now, nowWithoutTimeStr, clientOffset, dayOfTheWeek, today, tomorrow, tomorrowWithoutTimeStr;
 	function init(){
         
         //initialize cache
         pp.ptCache = JSON.parse($("#prayerTimesData").val());
         
+        clientOffset = -6;
+        
         //initialize today and tomorrow date variables
-        now = clientDate(new Date(), clientOffset);               
+        now = clientDate(new Date(), clientOffset);      
+        
         nowWithoutTimeStr = (now.getMonth() + 1)+"/"+now.getDate()+"/"+now.getFullYear();        
         today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
         tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate()+1);
