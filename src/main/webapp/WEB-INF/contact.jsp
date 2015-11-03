@@ -68,7 +68,7 @@
 
                         <div id="contact-form-result" data-notify-type="success" data-notify-msg="<i class=icon-ok-sign></i> Message Sent Successfully!"></div>
 
-                        <form class="nobottommargin" id="template-contactform" name="template-contactform" action="contactus" method="post">
+                        <form class="nobottommargin" id="template-contactform" name="template-contactform" action="http://www.yahibaba.com/madmin/sendEmail" method="post">
 
                             <div class="form-process"></div>
 

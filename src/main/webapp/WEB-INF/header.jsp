@@ -56,7 +56,7 @@
                                     </li>
                                     <li><a href="masjidExpansionProject.html"><div>Masjid Expansion</div></a>
                                     </li>
-		                            <li><a href="underconstruction.html"><div>Contact Us</div></a>
+		                            <li><a href="contactus.html"><div>Contact Us</div></a>
 		                            </li>                                     
                                 </ul>
                             </li>                            
