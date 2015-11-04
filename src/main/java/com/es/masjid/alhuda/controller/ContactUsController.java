@@ -5,6 +5,7 @@ import org.springframework.mail.SimpleMailMessage;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.es.masjid.alhuda.service.MasjidService;
@@ -14,8 +15,6 @@ public class ContactUsController {
 
 	@Autowired
 	private MasjidService masjidService;
-//    @Autowired
-//    private JavaMailSender mailSender;	
 	
 	@RequestMapping(value={"/contactus"}, method=RequestMethod.GET)
 	public ModelAndView displayContactForm() {
@@ -25,16 +24,13 @@ public class ContactUsController {
 	}	
 	
 	@RequestMapping(value={"/contactus"}, method=RequestMethod.POST)
-	public ModelAndView sendEmail() {
+	public ModelAndView sendEmail(@RequestParam(value="senderEmail", required=false) String senderEmail,
+            @RequestParam(value="senderName", required=false) String senderName,
+            @RequestParam(value="senderPhone", required=false) String senderPhone,
+            @RequestParam(value="emailSubject", required=false) String emailSubject,
+            @RequestParam(value="emailBody", required=false) String emailBody) {
 		
-    	//    creates a simple e-mail object
-        SimpleMailMessage email = new SimpleMailMessage();
-        email.setTo("muneer.yachb@gmail.com");
-        email.setSubject("Test");
-        email.setText("This is a test email");
-         
-        // sends the e-mail
-        //mailSender.send(email);		
+		String result = masjidService.sendEmail(senderEmail, senderName, senderPhone, emailSubject, emailBody);
 		
 		ModelAndView mv = new ModelAndView("contactUsAjaxTile");
 		return mv;

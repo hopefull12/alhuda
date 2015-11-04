@@ -47,6 +47,7 @@ public class MasjidService {
 	private static String REST_NEWS_URL = "rest.madmin.news";
 	private static String REST_DAILY_SCHEDULE_URL = "rest.madmin.pt.daily";
 	private static String REST_MONTHLY_SCHEDULE_URL = "rest.madmin.pt.monthly";
+	private static String REST_SEND_EMAIL="rest.madmin.email";
 	
 	private Logger logger = LoggerFactory.getLogger(MasjidService.class);
 	
@@ -75,6 +76,26 @@ public class MasjidService {
 		
 		return bean;		
 		
+	}	
+	
+	public String sendEmail(String fromEmail, String name, String phone, String subject, String body){
+		RestTemplate restTemplate = new RestTemplate();
+		String sendEmailURL = env.getRequiredProperty(REST_SEND_EMAIL);
+		
+		HttpHeaders headers = new HttpHeaders();
+		headers.set("Accept", MediaType.APPLICATION_JSON_VALUE);
+		HttpEntity<?> entity = new HttpEntity<>(headers);
+		
+		UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(sendEmailURL)
+		        .queryParam("fromEmail", fromEmail)
+		        .queryParam("name", name)
+		        .queryParam("phone", phone)
+		        .queryParam("subject", subject)
+		        .queryParam("body", body);		
+		
+		ResponseEntity<String> response = restTemplate.exchange(builder.build().encode().toUri(), HttpMethod.GET, entity, String.class);		
+		String message = response.getBody();	
+		return message;
 	}	
 	
 	public List<Map<String, String>> getItems(String itemType){

@@ -37,6 +37,7 @@
     <!-- External JavaScripts
     ============================================= -->
 	<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/js/plugins.js"></script>
 
     <!-- Document Title
     ============================================= -->
@@ -86,7 +87,7 @@
 
     <!-- Footer Scripts
     ============================================= -->
-	<script type="text/javascript" src="${pageContext.request.contextPath}/js/plugins.js"></script>
+	
 	<script type="text/javascript" src="${pageContext.request.contextPath}/js/moment.min.js"></script>
 	
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.calendario.js"></script>
