@@ -1,3 +1,21 @@
 target/**
 target/**/.*
 /target/
+target/
+.idea/
+*.iml
+*.ids
+*.ipr
+*.iws
+.settings
+*.log
+*ide-plugin.xml
+.classpath
+.project
+
+# ignore all .jar files
+*.jar
+
+# ignore all .zip files
+*.zip
+
