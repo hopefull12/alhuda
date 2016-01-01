@@ -45,6 +45,7 @@ public class MasjidService {
 	private static String REST_PRAYERTIME_PDF_URL = "rest.madmin.ptPdfFiles";
 	private static String REST_DOWNLOAD_FILE_URL = "rest.madmin.downloadfile";	
 	private static String REST_NEWS_URL = "rest.madmin.news";
+	private static String REST_ITEMS_URL = "rest.madmin.items";
 	private static String REST_DAILY_SCHEDULE_URL = "rest.madmin.pt.daily";
 	private static String REST_MONTHLY_SCHEDULE_URL = "rest.madmin.pt.monthly";
 	private static String REST_SEND_EMAIL="rest.madmin.email";
@@ -108,6 +109,32 @@ public class MasjidService {
 		
 		UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(pdfFilesURL)
 		        .queryParam("itemType", itemType);		
+		
+		ParameterizedTypeReference<List<Map<String, String>>> typeRef = new ParameterizedTypeReference<List<Map<String, String>>>() {};
+		
+		ResponseEntity<List<Map<String, String>>> response = restTemplate.exchange(builder.build().encode().toUri(), HttpMethod.GET, entity, typeRef);
+		
+		List<Map<String, String>> items = response.getBody();
+		
+		if(items != null){
+			logger.info("Number of items of type "+itemType+" retrieved: "+items.size());
+		}
+		
+		return response.getBody();
+	}	
+	
+	public List<Map<String, String>> getItemsPageable(String itemType, String page, String size){
+		RestTemplate restTemplate = new RestTemplate();
+		String pdfFilesURL = env.getRequiredProperty(REST_ITEMS_URL);
+		
+		HttpHeaders headers = new HttpHeaders();
+		headers.set("Accept", MediaType.APPLICATION_JSON_VALUE);
+		HttpEntity<?> entity = new HttpEntity<>(headers);
+		
+		UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(pdfFilesURL)
+		        .queryParam("itemType", itemType)
+		        .queryParam("page", page)
+		        .queryParam("size", size);		
 		
 		ParameterizedTypeReference<List<Map<String, String>>> typeRef = new ParameterizedTypeReference<List<Map<String, String>>>() {};
 		
