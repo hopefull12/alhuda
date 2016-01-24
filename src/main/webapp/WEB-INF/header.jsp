@@ -33,7 +33,7 @@
                                     <li><a href="underconstruction.html"><div>Audio Library</div></a>
 
                                     </li>
-                                    <li><a href="underconstruction.html"><div>Video Library</div></a>
+                                    <li><a href="audio.html?itemType=MEDIA_VIDEO&page=1&size=4"><div>Video Library</div></a>
                                     </li>
                                     <li><a href="downloads.html"><div>Downloads</div></a>
                                 </ul>

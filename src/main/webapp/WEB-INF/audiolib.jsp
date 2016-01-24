@@ -7,12 +7,8 @@
 		<section id="page-title">
 
 			<div class="container clearfix">
-				<h1>Portfolio123</h1>
-				<span>Showcase of Our Awesome Works in 4 Columns</span>
-				<ol class="breadcrumb">
-					<li><a href="#">Home</a></li>
-					<li class="active">Portfolio</li>
-				</ol>
+				<h1>Media Library</h1>				
+				
 			</div>
 
 		</section><!-- #page-title end -->
@@ -49,7 +45,7 @@
 					<!-- Pagination
 					============================================= -->
 					<div id="load-next-posts" class="center">
-						<a href="${pageContext.request.contextPath}/audio?itemType=MEDIA_AUDIO&page=2&size=5" class="button button-full button-dark button-rounded">Load more...</a>
+						<a href="${pageContext.request.contextPath}/audio?itemType=MEDIA_VIDEO&page=2&size=4" class="button button-full button-dark button-rounded">Load more...</a>
 					</div>
 				</div>
 
