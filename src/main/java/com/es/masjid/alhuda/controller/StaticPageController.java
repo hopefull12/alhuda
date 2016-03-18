@@ -67,6 +67,11 @@ public class StaticPageController {
 		return new ModelAndView("sundayschoolTile");
 	}	
 	
+	@RequestMapping(value={"/tickets"}, method=RequestMethod.GET)
+	public ModelAndView buyTickets() {
+		return new ModelAndView("ticketsTile");
+	}	
+	
 //	@RequestMapping(value = "/ptPDFFiles", method = RequestMethod.GET)
 //	public ModelAndView displayPDFFiles()
 //	                                                                  throws IOException {

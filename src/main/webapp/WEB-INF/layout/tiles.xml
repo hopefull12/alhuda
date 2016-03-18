@@ -24,6 +24,9 @@
 		<put-attribute name="body" value="/WEB-INF/onlyPrayerTimes.jsp" />
 	</definition>	
 	
+	<definition name="ticketsTile" extends="baseTile">
+		<put-attribute name="body" value="/WEB-INF/tickets.jsp" />
+	</definition>	
 	<definition name="audioTile" extends="baseTile">
 		<put-attribute name="body" value="/WEB-INF/audiolib.jsp" />
 	</definition>
