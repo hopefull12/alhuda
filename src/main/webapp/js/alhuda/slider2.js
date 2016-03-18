@@ -26,7 +26,7 @@
         //initialize cache
         pp.ptCache = JSON.parse($("#prayerTimesData").val());
         
-        clientOffset = -6;
+        clientOffset = -5;
         
         //initialize today and tomorrow date variables
         now = clientDate(new Date(), clientOffset);      
